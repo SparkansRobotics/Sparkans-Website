@@ -1,7 +1,7 @@
 * { 
     padding: 0;
     margin: 0;
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -27,24 +27,26 @@ body {
 }
 
 #header a {
-    color: #fff;
+    color: #00AED7;
     text-decoration: none;
     transition: 0.2s;
 }
 
 #header a:hover {
     transform: scale(1.05);
+    color: #fff;
     transition: 0.2s;
 }
 
 #nav a {
-    color: #fff;
+    color: #00AED7;
     text-decoration: underline transparent;
     transition: 0.2s;
 }
 
 #nav a:hover {
-    text-decoration: underline white;
+    border-bottom: 3px solid lightskyblue;
     transform: scale(1.1);
+    color: #fff;
     transition: 0.2s;
 }
