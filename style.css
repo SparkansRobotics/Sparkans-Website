@@ -5,7 +5,41 @@
 }
 
 body {
-    background-color: lightskyblue;
+    background-color: #070a12;
+}
+
+@keyframes appearUp {
+    0% {
+        transform: translateY(40%);
+        opacity: 0%;
+    } 100% {
+        transform: translateY(0%);
+        opacity: 100%;
+    }
+}
+
+#front-text {
+    left: 0;
+    line-height: 200px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    font-size: 100px;
+    animation: 3s cubic-bezier(.85,.26,.4,.9) 0s 1 appearUp;
+}
+
+h1 > .gradient {
+    background: linear-gradient(
+        to left,
+        rgb(134, 186, 255),
+        #32b8d6
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
 }
 
 /* style header with logo on the left and nav on the right */
@@ -16,7 +50,7 @@ body {
     padding: 1rem;
     padding-left: 3rem;
     padding-right: 3rem;
-    background-color: #000;
+    background-color: #192950;
     color: #fff;
 }
 
