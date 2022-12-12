@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #070a12;
+    background-color: #0c101b;
 }
 
 @keyframes appearUp {
@@ -18,11 +18,6 @@ body {
     }
 }
 
-@keyframes subtext {
-    from {opacity: 0%;}
-    to {opacity: 100%;}
-}
-
 #front-text {
     left: 0;
     line-height: 200px;
@@ -31,7 +26,7 @@ body {
     text-align: center;
     top: 50%;
     width: 100%;
-    font-size: 100px;
+    font-size: 10vw;
     animation: appearUp 3s cubic-bezier(.85,.26,.4,.9) 0s 1;
 }
 
@@ -45,21 +40,6 @@ h1 > .gradient {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
-}
-
-.subtext {
-    left: -85px;
-    line-height: 200px;
-    margin-top: -100px;
-    position: absolute;
-    text-align: center;
-    top: 55.5%;
-    width: 100%;
-    color: rgb(169, 209, 255);
-    animation: subtext 1s linear 0s 1;
-    animation-delay: 3s;
-    animation-fill-mode: forwards;
-    opacity: 0%;
 }
 
 /* style header with logo on the left and nav on the right */
@@ -79,7 +59,7 @@ h1 > .gradient {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 15rem;
+    width: 20rem;
 }
 
 #header a {
