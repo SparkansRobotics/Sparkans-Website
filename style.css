@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0;
     font-family: 'Inter', sans-serif;
+    cursor: none !important;
+    user-select: none;
 }
 
 body {
@@ -85,4 +87,22 @@ h1 > .gradient {
     transform: translateY(-1px);
     color: #fff;
     transition: 0.2s;
+}
+
+#cursor {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    position: fixed;
+    z-index: 1;
+    pointer-events: none;
+    transition: 0.25s;
+    transition-property: border, transform;
+}
+
+#cursor.clicked {
+    transform: scale(1.5);
+    transition: 0.25s;
+    transition-property: border, transform;
 }
