@@ -2,8 +2,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Inter', sans-serif;
-    cursor: none !important;
-    user-select: none;
+    overflow-x: hidden;
 }
 
 body {
@@ -17,6 +16,13 @@ body {
     } 100% {
         transform: translateY(0%);
         opacity: 100%;
+    }
+}
+@keyframes textGradient {
+    from {
+        background-position: 0% center;
+    } to {
+        background-position: -200% center;
     }
 }
 
@@ -33,15 +39,71 @@ body {
 }
 
 h1 > .gradient {
+    animation: textGradient 5s linear infinite;
     background: linear-gradient(
         to left,
+        #2eabc8,
         rgb(132, 161, 255),
-        #32b8d6
+        #2eabc8
     );
+    background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
+}
+.tiers > h1 {
+    position: absolute;
+    font-size: 6vw;
+    color: #2eabc8;
+    left: 20%;
+    top: 20%;
+}
+.tiers {
+    font-size: 3vw;
+}
+.tiers > p {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    font-size: 1vw;
+    color: rgb(233, 233, 233);
+}
+
+div > #bronze {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    color: #CD7F32;
+    text-align: center;
+}
+div > #silver {
+    position: absolute;
+    width: 100%;
+    color: silver;
+    text-align: center;
+    top: 100%;
+}
+div > #gold {
+    position: absolute;
+    width: 100%;
+    color: gold;
+    text-align: center;
+    top: 150%;
+}
+div > #platinum {
+    position: absolute;
+    width: 100%;
+    color: #E5E4E2;
+    text-align: center;
+    top: 200%;
+}
+div > #diamond {
+    position: absolute;
+    width: 100%;
+    color: #4EE2EC;
+    text-align: center;
+    top: 250%;
 }
 
 /* style header with logo on the left and nav on the right */
@@ -52,7 +114,7 @@ h1 > .gradient {
     padding: 1rem;
     padding-left: 3rem;
     padding-right: 3rem;
-    background-color: #192950;
+    background-color: rgb(21, 29, 50);
     color: #fff;
 }
 
@@ -87,22 +149,4 @@ h1 > .gradient {
     transform: translateY(-1px);
     color: #fff;
     transition: 0.2s;
-}
-
-#cursor {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    position: fixed;
-    z-index: 1;
-    pointer-events: none;
-    transition: 0.25s;
-    transition-property: border, transform;
-}
-
-#cursor.clicked {
-    transform: scale(1.5);
-    transition: 0.25s;
-    transition-property: border, transform;
 }
