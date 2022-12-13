@@ -98,11 +98,19 @@ h1 > .gradient {
     z-index: 1;
     pointer-events: none;
     transition: 0.25s;
-    transition-property: border, transform;
+    transition-property: border, transform, border-radius;
 }
 
 #cursor.clicked {
     transform: scale(1.5);
     transition: 0.25s;
-    transition-property: border, transform;
+    transition-property: border, transform, border-radius;
+}
+
+#cursor.hovered {
+    /* make cursor pointed */
+    border-radius: 0 50% 50% 50%;
+    border: 2px solid #fff;
+    transition: 0.25s;
+    transition-property: border, transform, border-radius;
 }

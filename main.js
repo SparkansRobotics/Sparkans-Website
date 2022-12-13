@@ -15,3 +15,13 @@ document.addEventListener('mousedown', function(){
 document.addEventListener('mouseup', function(){
     cursor.classList.remove("clicked");
 });
+
+/* On hover over a link, add the class 'hovered' to the cursor */
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('mouseover', function(){
+        cursor.classList.add("hovered");
+    });
+    link.addEventListener('mouseout', function(){
+        cursor.classList.remove("hovered");
+    });
+});
