@@ -66,7 +66,7 @@ h1 > .gradient {
     position: absolute;
     top: 35%;
     left: 20%;
-    font-size: 1vw;
+    font-size: 1rem;
     color: rgb(233, 233, 233);
 }
 
@@ -149,4 +149,32 @@ div > #diamond {
     transform: translateY(-1px);
     color: #fff;
     transition: 0.2s;
+}
+
+#footing {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(21, 29, 50);
+    color: grey;
+    text-align: left;
+    padding: 1rem;
+    font-size: 0.8rem;
+}
+#instagram{
+    width:5%;
+    height:5%;
+    position: fixed;
+    right: 1rem;
+    bottom: 0.5rem;
+    fill: #00AED7;
+}
+#mail{
+    width:5%;
+    height:5%;
+    position: fixed;
+    right: 4rem;
+    bottom: 0.5rem;
+    fill: #00AED7;
 }
