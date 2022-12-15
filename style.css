@@ -54,56 +54,60 @@ h1 > .gradient {
 }
 .tiers > h1 {
     position: absolute;
-    font-size: 6vw;
+    font-size: 6vh;
     color: #2eabc8;
-    left: 20%;
+    left: 10%;
     top: 20%;
 }
-.tiers {
-    font-size: 3vw;
+.tiers > div {
+    position: absolute;
+    font-size: 5vh;
 }
 .tiers > p {
     position: absolute;
     top: 35%;
-    left: 20%;
+    left: 10%;
     font-size: 1rem;
     color: rgb(233, 233, 233);
 }
 
-div > #bronze {
-    position: absolute;
-    width: 100%;
+div > #diamond {
+    color: #4EE2EC;
+    left: 100px;
     top: 50%;
-    color: #CD7F32;
-    text-align: center;
 }
-div > #silver {
-    position: absolute;
-    width: 100%;
-    color: silver;
-    text-align: center;
-    top: 100%;
+div > #platinum {
+    color: #E5E4E2;
+    right: 100px;
+    top: 50%;
 }
 div > #gold {
-    position: absolute;
-    width: 100%;
     color: gold;
     text-align: center;
     top: 150%;
 }
-div > #platinum {
-    position: absolute;
-    width: 100%;
-    color: #E5E4E2;
+div > #silver {
+    color: silver;
     text-align: center;
-    top: 200%;
+    top: 150%;
 }
-div > #diamond {
-    position: absolute;
-    width: 100%;
-    color: #4EE2EC;
+div > #bronze {
+    top: 150%;
+    color: #CD7F32;
     text-align: center;
-    top: 250%;
+}
+
+@media only screen and (max-width: 800px) {
+    div > #diamond {top: 50%; left: 0}
+    div > #platinum {top: 100%; right: 0}
+    div > #gold {top: 150%}
+    div > #silver {top: 200%}
+    div > #bronze {top: 250%}
+
+    .tiers > div {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* style header with logo on the left and nav on the right */
@@ -159,22 +163,38 @@ div > #diamond {
     background-color: rgb(21, 29, 50);
     color: grey;
     text-align: left;
-    padding: 1rem;
+    padding: 1.2rem;
     font-size: 0.8rem;
 }
-#instagram{
-    width:5%;
-    height:5%;
+#instagram {
+    width: 30px;
+    height: 30px;
     position: fixed;
     right: 1rem;
-    bottom: 0.5rem;
-    fill: #00AED7;
+    bottom: 0.6rem;
+    fill: #1e5697;
 }
-#mail{
-    width:5%;
-    height:5%;
+#mail {
+    width: 30px;
+    height: 30px;
     position: fixed;
     right: 4rem;
-    bottom: 0.5rem;
-    fill: #00AED7;
+    bottom: 0.6rem;
+    fill: #1e5697;
+}
+#tiktok {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 7rem;
+    bottom: 0.6rem;
+    fill: #1e5697;
+}
+#twitter {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 10rem;
+    bottom: 0.6rem;
+    fill: #1e5697;
 }
