@@ -7,6 +7,7 @@
 
 body {
     background-color: #0c101b;
+    height: 100%;
 }
 
 @keyframes appearUp {
@@ -32,10 +33,12 @@ body {
     margin-top: -100px;
     position: absolute;
     text-align: center;
+    align-items: center;
     top: 50%;
     width: 100%;
     font-size: 10vw;
     animation: appearUp 3s cubic-bezier(.85,.26,.4,.9) 0s 1;
+    overflow-y: hidden;
 }
 
 h1 > .gradient {
@@ -59,10 +62,19 @@ h1 > .gradient {
     left: 10%;
     top: 20%;
 }
-.tiers > div {
+
+.tiers > .levels > div {
     position: absolute;
-    font-size: 5vh;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+} .tiers > .lowerlevels > div {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
 }
+
 .tiers > p {
     position: absolute;
     top: 35%;
@@ -72,42 +84,49 @@ h1 > .gradient {
 }
 
 div > #diamond {
-    color: #4EE2EC;
-    left: 100px;
+    background: linear-gradient(
+        to left,
+        #c4d4ff,
+        #1395eb
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
     top: 50%;
 }
 div > #platinum {
     color: #E5E4E2;
-    right: 100px;
-    top: 50%;
+    top: 100%; 
 }
 div > #gold {
-    color: gold;
-    text-align: center;
+    color: rgb(214, 182, 0);
     top: 150%;
 }
 div > #silver {
     color: silver;
-    text-align: center;
-    top: 150%;
+    top: 200%;
 }
 div > #bronze {
-    top: 150%;
     color: #CD7F32;
-    text-align: center;
+    top: 250%;
 }
 
-@media only screen and (max-width: 800px) {
-    div > #diamond {top: 50%; left: 0}
-    div > #platinum {top: 100%; right: 0}
-    div > #gold {top: 150%}
-    div > #silver {top: 200%}
-    div > #bronze {top: 250%}
-
-    .tiers > div {
-        width: 100%;
-        text-align: center;
+@media only screen and (min-width: 1000px) {
+    .tiers > .levels {
+        display: flex;
+        justify-content: space-around;
+        height: 800px;
+        align-items: center;
     }
+    .tiers > .lowerlevels {
+        display: flex;
+        justify-content: space-around;
+        height: 500px;
+        align-items: center;
+    }
+    .tiers > .levels > div {position: static; font-size: 5vh}
+    .tiers > .lowerlevels > div {position: static; font-size: 3vh;}
 }
 
 /* style header with logo on the left and nav on the right */
@@ -172,7 +191,7 @@ div > #bronze {
     position: fixed;
     right: 1rem;
     bottom: 0.6rem;
-    fill: #1e5697;
+    fill: #2363ac;
 }
 #mail {
     width: 30px;
@@ -180,7 +199,7 @@ div > #bronze {
     position: fixed;
     right: 4rem;
     bottom: 0.6rem;
-    fill: #1e5697;
+    fill: #2363ac;
 }
 #tiktok {
     width: 30px;
@@ -188,7 +207,7 @@ div > #bronze {
     position: fixed;
     right: 7rem;
     bottom: 0.6rem;
-    fill: #1e5697;
+    fill: #2363ac;
 }
 #twitter {
     width: 30px;
@@ -196,5 +215,5 @@ div > #bronze {
     position: fixed;
     right: 10rem;
     bottom: 0.6rem;
-    fill: #1e5697;
+    fill: #2363ac;
 }
