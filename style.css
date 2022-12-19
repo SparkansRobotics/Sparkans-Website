@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #0c101b;
+    background-color: #111627;
     height: 100%;
 }
 
@@ -41,6 +41,27 @@ body {
     overflow-y: hidden;
 }
 
+.event-container {
+    display: flex;
+}
+.event-container img {
+    height: 270px;
+    width: 480px;
+    flex-basis: 40%;
+}
+.event-container p, h1 {
+    color: whitesmoke;
+}
+#event {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    background-color: pink;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    padding: 10px 20vw 10px 20vw;
+}
+
 h1 > .gradient {
     animation: textGradient 5s linear infinite;
     background: linear-gradient(
@@ -57,7 +78,7 @@ h1 > .gradient {
 }
 .tiers > h1 {
     position: absolute;
-    font-size: 6vh;
+    font-size: 5rem;
     color: #2eabc8;
     left: 10%;
     top: 20%;
@@ -84,11 +105,16 @@ h1 > .gradient {
 }
 
 div > #diamond {
+    animation: textGradient 2s linear infinite;
     background: linear-gradient(
         to left,
-        #c4d4ff,
-        #1395eb
+        #1d9df1,
+        #80ccff,
+        #1d9df1,
+        #1d9df1,
+        #1d9df1
     );
+    background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
