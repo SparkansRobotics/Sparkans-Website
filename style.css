@@ -42,7 +42,9 @@ body {
 }
 
 .event-container {
-    display: flex;
+    position: absolute;
+    top: 100%;
+    width: 100%;
 }
 .event-container img {
     height: 270px;
@@ -54,8 +56,8 @@ body {
 }
 #event {
     text-align: center;
-    margin: auto;
     width: 50%;
+    margin: auto;
     background-color: pink;
     border: 2px solid whitesmoke;
     border-radius: 5px;
@@ -98,13 +100,18 @@ h1 > .gradient {
 
 .tiers > p {
     position: absolute;
-    top: 35%;
     left: 10%;
+    top: 35%;
+    color: whitesmoke;
     font-size: 1rem;
-    color: rgb(233, 233, 233);
 }
-.lowerlevels p {font-size: 16px}
-.levels p {font-size: 24px}
+
+.lowerlevels p {
+    font-size: 16px;
+}
+.levels p {
+    font-size: 16px;
+}
 
 div > #diamond {
     animation: textGradient 2s linear infinite;
@@ -201,11 +208,13 @@ div > #bronze {
     color: #fff;
     transition: 0.2s;
 }
-
+.footing-container {
+    position: fixed;
+}
 #footing {
     position: fixed;
-    left: 0;
     bottom: 0;
+    left: 0;
     width: 100%;
     background-color: rgb(21, 29, 50);
     color: grey;
@@ -223,8 +232,8 @@ div > #bronze {
     width: 30px;
     height: 30px;
     bottom: 0.6rem;
-    position: fixed;
     fill: #2363ac;
+    position: fixed;
     transition: 0.2s;
 }
 
