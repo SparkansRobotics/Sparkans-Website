@@ -103,6 +103,8 @@ h1 > .gradient {
     font-size: 1rem;
     color: rgb(233, 233, 233);
 }
+.lowerlevels p {font-size: 16px}
+.levels p {font-size: 24px}
 
 div > #diamond {
     animation: textGradient 2s linear infinite;
