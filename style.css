@@ -213,35 +213,23 @@ div > #bronze {
     padding: 1.2rem;
     font-size: 0.8rem;
 }
-#instagram {
+
+#instagram { right: 1rem; }
+#mail { right: 4rem; }
+#tiktok { right: 7rem; }
+#twitter { right: 10rem; }
+
+.social {
     width: 30px;
     height: 30px;
-    position: fixed;
-    right: 1rem;
     bottom: 0.6rem;
+    position: fixed;
     fill: #2363ac;
+    transition: 0.2s;
 }
-#mail {
-    width: 30px;
-    height: 30px;
-    position: fixed;
-    right: 4rem;
-    bottom: 0.6rem;
-    fill: #2363ac;
-}
-#tiktok {
-    width: 30px;
-    height: 30px;
-    position: fixed;
-    right: 7rem;
-    bottom: 0.6rem;
-    fill: #2363ac;
-}
-#twitter {
-    width: 30px;
-    height: 30px;
-    position: fixed;
-    right: 10rem;
-    bottom: 0.6rem;
-    fill: #2363ac;
+
+.social:hover {
+    transform: translateY(-2px);
+    transition: 0.2s;
+    fill: #2d7edb;
 }
