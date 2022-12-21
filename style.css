@@ -47,21 +47,31 @@ body {
     width: 100%;
 }
 .event-container img {
-    height: 270px;
-    width: 480px;
-    flex-basis: 40%;
+    height: auto;
+    max-width: 100%;
+    flex-basis: 60%;
+    border-radius: 5px;
 }
-.event-container p, h1 {
+.event-container h1 {
     color: whitesmoke;
+    font-size: 26px;
+    margin-right: 10px;
 }
 #event {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 50%;
     margin: auto;
-    background-color: pink;
-    border: 2px solid whitesmoke;
+    margin-bottom: 40px;
+    background-color: rgb(34, 74, 134);
+    border: 0px solid rgb(0, 0, 0);
     border-radius: 5px;
     padding: 10px 20vw 10px 20vw;
+}
+@media only screen and (max-width: 1000px) {
+    #event {display: block}
+    .event-container h1 {margin-right: 0; margin-bottom: 10px}
 }
 
 h1 > .gradient {
