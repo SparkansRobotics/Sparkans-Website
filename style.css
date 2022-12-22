@@ -10,9 +10,9 @@ body {
     height: 100%;
 }
 
-@keyframes appearUp {
+@keyframes appear {
     0% {
-        transform: translateY(40%);
+        transform: translateY(100%);
         opacity: 0%;
     } 100% {
         transform: translateY(0%);
@@ -46,29 +46,42 @@ body {
 }
 
 #front-text {
-    left: 0;
-    line-height: 200px;
-    margin-top: -100px;
-    position: absolute;
+    display: block;
+    margin-top: 30vh;
     text-align: center;
     align-items: center;
-    top: 50%;
-    width: 100%;
     font-size: 10vw;
-    animation: appearUp 3s cubic-bezier(.85,.26,.4,.9) 0s 1;
+    animation: appear 1.2s cubic-bezier(.06,.62,.58,1) 0.2s 1 forwards;
     overflow-y: hidden;
+    opacity: 0%;
+    transform: translateY(100%);
 }
-
+.event-divider-wrapper {
+    display: block;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin-left: 8%;
+}
+#event-container-divider {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 2em;
+    width: 84%;
+    margin-top: 40vh;
+    margin-bottom: 10vh;
+    border-bottom: 2px solid whitesmoke;
+    padding-bottom: 1vh;
+}
 .event-container {
-    position: absolute;
-    top: 100%;
     width: 100%;
 }
 .event-container img {
     height: auto;
-    max-width: 100%;
-    flex-basis: 60%;
+    width: 50%;
+    flex-basis: 30%;
     border-radius: 5px;
+    float: right;
 }
 .event-container h1 {
     color: whitesmoke;
@@ -78,14 +91,13 @@ body {
 #event {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    width: 50%;
+    width: 70%;
     margin: auto;
     margin-bottom: 40px;
     background-color: rgb(18, 51, 100);
     border: 0px solid rgb(0, 0, 0);
     border-radius: 5px;
-    padding: 10px 20vw 10px 20vw;
+    padding: 25px 5vw 25px 5vw;
 }
 @media only screen and (max-width: 1000px) {
     #event {display: block}
@@ -136,15 +148,15 @@ h1 > .gradient {
     margin-bottom: 100px;
 }
 
-.lowerlevels ul {
+.lowerlevels li {
     font-size: 1rem;
     text-align: left;
-    margin-left: 20%;
+    margin-left: 4rem;
 }
-.levels ul {
+.levels li {
     font-size: 16px;
     text-align: left;
-    margin-left: 20%;
+    margin-left: 4rem;
 }
 
 div > #diamond {
@@ -241,16 +253,13 @@ div > #bronze {
     transition: 0.2s;
 }
 .footing-container {
-    position: fixed;
+    display: block;
 }
 #footing {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    display: flex;
     width: 100%;
     background-color: rgb(21, 29, 50);
     color: grey;
-    text-align: left;
     padding: 1.2rem;
     font-size: 0.8rem;
 }
@@ -265,7 +274,6 @@ div > #bronze {
     height: 30px;
     bottom: 0.6rem;
     fill: #2363ac;
-    position: fixed;
     transition: 0.2s;
 }
 
