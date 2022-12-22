@@ -72,7 +72,7 @@ body {
 }
 .event-container h1 {
     color: whitesmoke;
-    font-size: 16px;
+    font-size: 2rem;
     margin-right: 10px;
 }
 #event {
@@ -82,7 +82,7 @@ body {
     width: 50%;
     margin: auto;
     margin-bottom: 40px;
-    background-color: rgb(34, 74, 134);
+    background-color: rgb(18, 51, 100);
     border: 0px solid rgb(0, 0, 0);
     border-radius: 5px;
     padding: 10px 20vw 10px 20vw;
@@ -107,38 +107,44 @@ h1 > .gradient {
     white-space: nowrap;
 }
 .tiers > h1 {
-    position: absolute;
+    display: block;
     font-size: 5rem;
     color: #2eabc8;
-    left: 10%;
-    top: 20%;
+    margin-left: 10%;
+    margin-top: 100px;
+}
+.tiers > p {
+    display: block;
+    margin-left: 10%;
+    color: whitesmoke;
+    font-size: 1rem;
+    margin-top: 30px;
 }
 
 .tiers > .levels > div {
-    position: absolute;
+    display: block;
     width: 100%;
     text-align: center;
     font-size: 24px;
-} .tiers > .lowerlevels > div {
-    position: absolute;
+    margin-bottom: 100px;
+} 
+.tiers > .lowerlevels > div {
+    display: block;
     width: 100%;
     text-align: center;
     font-size: 24px;
+    margin-bottom: 100px;
 }
 
-.tiers > p {
-    position: absolute;
-    left: 10%;
-    top: 35%;
-    color: whitesmoke;
+.lowerlevels ul {
     font-size: 1rem;
+    text-align: left;
+    margin-left: 20%;
 }
-
-.lowerlevels p {
+.levels ul {
     font-size: 16px;
-}
-.levels p {
-    font-size: 16px;
+    text-align: left;
+    margin-left: 20%;
 }
 
 div > #diamond {
@@ -156,31 +162,29 @@ div > #diamond {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
-    top: 50%;
+    border: 0px solid rgb(0, 0, 0);
+    margin-top: 50px;
 }
 div > #platinum {
     color: #E5E4E2;
-    top: 100%; 
 }
 div > #gold {
     color: rgb(214, 182, 0);
-    top: 150%;
 }
 div > #silver {
     color: silver;
-    top: 200%;
 }
 div > #bronze {
     color: #CD7F32;
-    top: 250%;
 }
 
 @media only screen and (min-width: 1000px) {
     .tiers > .levels {
         display: flex;
         justify-content: space-around;
-        height: 800px;
+        height: 500px;
         align-items: center;
+        margin-top: 18vh;
     }
     .tiers > .lowerlevels {
         display: flex;
