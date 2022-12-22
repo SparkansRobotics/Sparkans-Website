@@ -19,6 +19,24 @@ body {
         opacity: 100%;
     }
 }
+@keyframes showUp {
+    from {
+        transform: translateY(0%);
+        opacity: 0%;
+    } to {
+        transform: translateY(10%);
+        opacity: 100%;
+    }
+}
+@keyframes hideDown {
+    from {
+        transform: translateY(0%);
+        opacity: 100%;
+    } to {
+        transform: translateY(10%);
+        opacity: 0%;
+    }
+}
 @keyframes textGradient {
     from {
         background-position: 0% center;
@@ -54,13 +72,13 @@ body {
 }
 .event-container h1 {
     color: whitesmoke;
-    font-size: 26px;
+    font-size: 16px;
     margin-right: 10px;
 }
 #event {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 50%;
     margin: auto;
     margin-bottom: 40px;
