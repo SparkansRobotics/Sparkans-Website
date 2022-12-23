@@ -252,6 +252,141 @@ div > #bronze {
     color: #fff;
     transition: 0.2s;
 }
+
+/* Style Hamburger Icon */
+
+#hamburger-icon{
+    margin:auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+
+.bar1{
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+    position:absolute;
+    top: 20px;
+    right: 1rem;
+}
+
+.bar2{
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+    position:absolute;
+    top: 30px;
+    right: 1rem;
+}
+
+.bar3{
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+    position:absolute;
+    top: 40px;
+    right: 1rem;
+}
+
+
+
+.open .bar1{
+    -webkit-transform: rotate(-45deg) translate(-8px, -10px);
+    transform: rotate(45deg) translate(4px, 4px);
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+.open .bar2{
+    opacity: 0;
+}
+
+.open .bar3{
+    -webkit-transform: rotate(-45deg) translate(-8px, -10px);
+    transform: rotate(-45deg) translate(6px, -8px);
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+
+.open .mobile-menu{
+    position: absolute;
+    display: flex;
+    left: 490px;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+
+.mobile-menu{
+    display:none;
+    position:absolute;
+    top:50px;
+    left:0;
+    height: calc(100vh - 50px);
+    width: 100%;
+}
+
+.mobile-menu a{
+    color:#00AED7
+}
+
+.mobile-menu #mobile-home{
+    margin: bottom 10px;
+    /* color: #00AED7; */
+    transition: 0.2s;
+    position: absolute;
+    top: 40px;
+}
+
+.mobile-menu #mobile-about{
+    margin: bottom 10px;
+    /* color: #00AED7; */
+    transition: 0.2s;
+    position: absolute;
+    top: 60px;
+}
+
+.mobile-menu #mobile-sponsors{
+    margin: bottom 10px;
+    /* color: #00AED7; */
+    transition: 0.2s;
+    position: absolute;
+    top: 80px
+}
+
+.mobile-menu #mobile-contacts{
+    margin: bottom 10px;
+    /* color: #00AED7; */
+    transition: 0.2s;
+    position: absolute;
+    top: 100px;
+}
+
+.mobile-menu li:hover {
+    border-bottom: 3px solid lightskyblue;
+    transform: translateY(-1px);
+    color: #fff;
+    transition: 0.2s;
+}
+
+@media only screen and (max-width: 600px) {
+    #nav{
+        display: none;
+    } 
+
+    #hamburger-icon{
+        display:block;
+    }
+}
+
 .footing-container {
     display: block;
 }
