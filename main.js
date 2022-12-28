@@ -1,3 +1,5 @@
-function toggleMobileMenu(menu){
-    menu.classList.toggle("open")
+var mobileMenu = document.getElementById("mobile-menu-container")
+
+function toggleMobileMenu(){
+    mobileMenu.classList.toggle("open")
 }
