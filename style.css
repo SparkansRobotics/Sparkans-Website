@@ -19,22 +19,11 @@ body {
         opacity: 100%;
     }
 }
-@keyframes showUp {
+@keyframes textGradient {
     from {
-        transform: translateY(0%);
-        opacity: 0%;
+        background-position: 0% center;
     } to {
-        transform: translateY(10%);
-        opacity: 100%;
-    }
-}
-@keyframes hideDown {
-    from {
-        transform: translateY(0%);
-        opacity: 100%;
-    } to {
-        transform: translateY(10%);
-        opacity: 0%;
+        background-position: -200% center;
     }
 }
 
@@ -43,7 +32,7 @@ body {
     margin-top: 30vh;
     text-align: center;
     align-items: center;
-    font-size: 10vw;
+    font-size: 10rem;
     animation: appear 1.2s cubic-bezier(.06,.62,.58,1) 0.2s 1 forwards;
     overflow-y: hidden;
     opacity: 0%;
@@ -97,6 +86,7 @@ body {
 @media only screen and (max-width: 1000px) {
     #event {display: block}
     .event-container h1 {margin-right: 0; margin-bottom: 10px}
+    #front-text {font-size: 10vh}
 }
 
 h1 > .gradient {
@@ -120,6 +110,9 @@ h1 > .gradient {
     margin-left: 10%;
     margin-top: 100px;
 }
+@media only screen and (max-width: 1000px) {
+    #sponsor-text > h1 {font-size: 7vh}
+}
 #sponsor-text > p {
     display: block;
     margin-left: 10%;
@@ -131,6 +124,10 @@ h1 > .gradient {
     text-align: center;
     margin-top: 5vh;
 }
+.tiers {
+    height: 100%;
+    overflow: hidden;
+}
 .tiers > div {
     display: inline-block;
     border: 0px solid rgb(0, 0, 0);
@@ -141,6 +138,8 @@ h1 > .gradient {
     font-size: 1.2rem;
     margin: 1vw;
     margin-bottom: 2vh;
+    max-width: 300px;
+    vertical-align: top;
 }
 .tiers > div:hover {
     background-color: rgb(14, 64, 131);
@@ -153,6 +152,9 @@ h1 > .gradient {
 .tiers svg {
     width: 40%;
     height: auto;
+}
+.open #tier-content {
+    display: inline-block;
 }
 
 div > #diamond {
@@ -175,6 +177,10 @@ div > #bronze {
 #gold svg {fill:rgb(214, 182, 0)}
 #silver svg {fill:silver}
 #bronze svg {fill:#CD7F32}
+
+#sponsor-info {
+    margin-top: 100px;
+}
 
 /* style header with logo on the left and nav on the right */
 #header {
