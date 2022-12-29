@@ -86,7 +86,7 @@ body {
 @media only screen and (max-width: 1000px) {
     #event {display: block}
     .event-container h1 {margin-right: 0; margin-bottom: 10px}
-    #front-text {font-size: 10vh}
+    #front-text {font-size: 12vh}
 }
 
 h1 > .gradient {
@@ -111,7 +111,7 @@ h1 > .gradient {
     margin-top: 100px;
 }
 @media only screen and (max-width: 1000px) {
-    #sponsor-text > h1 {font-size: 7vh}
+    #sponsor-text > h1 {font-size: 10vw}
 }
 #sponsor-text > p {
     display: block;
