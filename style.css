@@ -19,17 +19,10 @@ body {
         opacity: 100%;
     }
 }
-@keyframes textGradient {
-    from {
-        background-position: 0% center;
-    } to {
-        background-position: -200% center;
-    }
-}
 
 #front-text {
     display: block;
-    margin-top: 30vh;
+    margin-top: 15rem;
     text-align: center;
     align-items: center;
     font-size: 10rem;
@@ -38,7 +31,32 @@ body {
     opacity: 0%;
     transform: translateY(100%);
     z-index: 5;
+    color: white;
 }
+
+#promotional-container {
+    display: block;
+    margin-top: 22rem;
+    margin-left: 6rem;
+}
+#promotional-container h1 {
+    color: #2363ac;
+    font-size: 3.5rem;
+    line-height: 8rem;
+    background-image: linear-gradient(to right, rgb(22, 45, 80), rgba(255, 0, 0, 0));
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-left: 2rem;
+}
+.highlight {
+    color: whitesmoke;
+    font-size: 9rem;
+    border-bottom: 10px solid whitesmoke;
+}
+
+
+
+
 .event-divider-wrapper {
     display: block;
     width: 100%;
@@ -51,8 +69,8 @@ body {
     text-align: center;
     font-size: 2em;
     width: 84%;
-    margin-top: 40vh;
-    margin-bottom: 10vh;
+    margin-top: 20rem;
+    margin-bottom: 4rem;
     border-bottom: 2px solid whitesmoke;
     padding-bottom: 1vh;
 }
@@ -86,18 +104,15 @@ body {
 @media only screen and (max-width: 1000px) {
     #event {display: block}
     .event-container h1 {margin-right: 0; margin-bottom: 10px}
-    #front-text {font-size: 12vh}
+    #front-text {font-size: 5rem}
 }
 
 h1 > .gradient {
-    animation: textGradient 5s linear infinite;
     background: linear-gradient(
-        to left,
-        #2eabc8,
-        rgb(132, 161, 255),
-        #2eabc8
+        to right,
+        #2e7bc8,
+        rgb(71, 39, 167)
     );
-    background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -190,9 +205,9 @@ div > #bronze {
     padding: 1rem;
     padding-left: 3rem;
     padding-right: 3rem;
-    background-color: rgb(21, 29, 50);
     color: #fff;
     z-index: 100;
+    background-image: linear-gradient(rgb(5, 17, 49), rgba(255, 0, 0, 0))
 }
 
 /* style nav items */
@@ -275,13 +290,9 @@ div > #bronze {
 }
 
 @media only screen and (max-width: 600px) {
-    #nav{
-        display: none;
-    } 
-
-    #mobile-menu-icon {
-        display: flex;
-    }
+    #nav{display: none} 
+    #mobile-menu-icon {display: flex}
+    .event-container h1 {font-size: 1.5rem}
 }
 @media only screen and (min-width: 600px) {
     .open .mobile-menu {
