@@ -1,3 +1,12 @@
+:root {
+    --bright-blue-1: #00AED7;
+    --bright-blue-2: #2e7bc8;
+
+    --dark-blue-bg: #111627;
+}
+
+
+
 * { 
     padding: 0;
     margin: 0;
@@ -8,6 +17,7 @@
 body {
     background-color: #111627;
     height: 100%;
+    background-image: linear-gradient(to right, #111627, #141b30, #111627)
 }
 
 @keyframes appear {
@@ -37,7 +47,7 @@ body {
 #promotional-container {
     display: block;
     margin-top: 22rem;
-    margin-left: 6rem;
+    margin-left: 5%;
 }
 #promotional-container h1 {
     color: #2363ac;
@@ -105,6 +115,35 @@ body {
     #event {display: block}
     .event-container h1 {margin-right: 0; margin-bottom: 10px}
     #front-text {font-size: 5rem}
+    #promotional-container h1 {font-size: 1.5rem; line-height: 3rem}
+    .highlight {font-size: 3rem; border-bottom: 5px solid whitesmoke;}
+}
+.sponsor-promo-wrapper {
+    display: block;
+}
+.sponsor-promo-wrapper a {
+    text-decoration: none;
+}
+.sponsor-promo-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    background-color: #161e39;
+    padding: 20px;
+    align-items: center;
+}
+.sponsor-promo-container h1 {
+    font-size: 3rem;
+    color: whitesmoke;
+}
+.sponsor-promo-container svg {
+    width: 50px;
+    height: auto;
+    fill: whitesmoke;
+    transition: 0.2s;
+}
+.sponsor-promo-container:hover > svg{
+    transform: translateX(5px);
 }
 
 h1 > .gradient {
@@ -127,6 +166,8 @@ h1 > .gradient {
 }
 @media only screen and (max-width: 1000px) {
     #sponsor-text > h1 {font-size: 10vw}
+    .sponsor-promo-container h1 {font-size: 2rem}
+    .sponsor-promo-container svg {width: 40px}
 }
 #sponsor-text > p {
     display: block;
@@ -207,7 +248,7 @@ div > #bronze {
     padding-right: 3rem;
     color: #fff;
     z-index: 100;
-    background-image: linear-gradient(rgb(5, 17, 49), rgba(255, 0, 0, 0))
+    background-image: linear-gradient(rgb(3, 13, 38), rgba(255, 0, 0, 0))
 }
 
 /* style nav items */

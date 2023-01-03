@@ -1,3 +1,12 @@
+// Scroll user to top of page on refresh
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
+
+
+
+
+
 // Typing effect "Next Generation"
 
 var char = 0;
@@ -17,7 +26,7 @@ var myElement = document.getElementById('type-effect');
 
 document.addEventListener("scroll", () =>  {
     var bounding = myElement.getBoundingClientRect();
-    
+
     if (bounding.top >= 0 && bounding.left >= 0 && bounding.right <= window.innerWidth && bounding.bottom <= window.innerHeight) {
         if (scrolled != true) {
             typeEffect();
@@ -25,6 +34,11 @@ document.addEventListener("scroll", () =>  {
         }
     }
 })
+
+
+
+
+// Mobile menu toggle
 
 var mobileMenu = document.getElementById("mobile-menu-container")
 
