@@ -22,30 +22,51 @@ function typeEffect() {
         }
 }
 
-var myElement = document.getElementById('type-effect');
+// If object in view
 
-document.addEventListener("scroll", () =>  {
-    var bounding = myElement.getBoundingClientRect();
+function inView(element) {
+    var bounding = element.getBoundingClientRect();
 
-    if (bounding.top >= 0 && bounding.left >= 0 && bounding.right <= window.innerWidth && bounding.bottom <= window.innerHeight) {
-        if (scrolled != true) {
-            typeEffect();
-            scrolled = true;
+    if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Event elements
+
+var typeEffectElement = document.getElementById('type-effect');
+var eventElements = document.getElementsByClassName('event');
+
+// Event Handler
+
+function eventHandler() {
+    if (inView(typeEffectElement) && !typeEffectElement.classList.contains("active")) {
+        typeEffect();
+        typeEffectElement.classList.add("active");
+    }
+    for (var i=0; i < eventElements.length; i++) {
+        if (inView(eventElements[i]) && !eventElements[i].classList.contains("active")) {
+            eventElements[i].classList.add("active");
         }
     }
-})
+}
 
+document.addEventListener("scroll", () =>  {
+    eventHandler()
+})
 
 
 
 // Mobile menu toggle
 
-var mobileMenu = document.getElementById("mobile-menu-container")
+var mobileMenu = document.getElementById("mobile-menu-container");
 
 function toggleMobileMenu(){
-    mobileMenu.classList.toggle("open")
+    mobileMenu.classList.toggle("open");
 }
 
 function toggleElement(el) {
-    el.classList.toggle("open")
+    el.classList.toggle("open");
 }

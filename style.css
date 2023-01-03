@@ -1,8 +1,16 @@
 :root {
+    --gray: gray;
+    --white: whitesmoke;
+    --purple: rgb(71, 39, 167);
+
     --bright-blue-1: #00AED7;
     --bright-blue-2: #2e7bc8;
+    --bright-blue-3: #2363ac;
+
+    --navy-accent: rgb(18, 51, 100);  /* Popular */
 
     --dark-blue-bg: #111627;
+    --dark-blue-accent: #161e39;
 }
 
 
@@ -15,9 +23,23 @@
 }
 
 body {
-    background-color: #111627;
+    background-color: var(--dark-blue-bg);
     height: 100%;
-    background-image: linear-gradient(to right, #111627, #141b30, #111627)
+    background-image: linear-gradient(to right, var(--dark-blue-bg), #141b30, var(--dark-blue-bg))
+}
+
+@keyframes active {
+    from {
+        transform: translateY(50%);
+        opacity: 0%;
+    } to {
+        transform: translateY(0%);
+        opacity: 100%;
+    }
+}
+
+.active {
+    animation: active 0.3s linear 0s 1 forwards;
 }
 
 @keyframes appear {
@@ -50,7 +72,7 @@ body {
     margin-left: 5%;
 }
 #promotional-container h1 {
-    color: #2363ac;
+    color: var(--bright-blue-3);
     font-size: 3.5rem;
     line-height: 8rem;
     background-image: linear-gradient(to right, rgb(22, 45, 80), rgba(255, 0, 0, 0));
@@ -59,9 +81,9 @@ body {
     padding-left: 2rem;
 }
 .highlight {
-    color: whitesmoke;
+    color: var(--white);
     font-size: 9rem;
-    border-bottom: 10px solid whitesmoke;
+    border-bottom: 10px solid var(--white);
 }
 
 
@@ -75,13 +97,13 @@ body {
     margin-left: 8%;
 }
 #event-container-divider {
-    color: whitesmoke;
+    color: var(--white);
     text-align: center;
     font-size: 2em;
     width: 84%;
-    margin-top: 20rem;
+    margin-top: 16rem;
     margin-bottom: 4rem;
-    border-bottom: 2px solid whitesmoke;
+    border-bottom: 2px solid var(--white);
     padding-bottom: 1vh;
 }
 .event-container {
@@ -95,28 +117,29 @@ body {
     float: right;
 }
 .event-container h1 {
-    color: whitesmoke;
+    color: var(--white);
     font-size: 2rem;
     margin-right: 20px;
 }
-#event {
+.event {
     display: flex;
     align-items: center;
     width: 70%;
     margin: auto;
     margin-bottom: 40px;
-    background-color: rgb(18, 51, 100);
+    background-color: var(--navy-accent);
     border: 0px solid rgb(0, 0, 0);
     border-radius: 5px;
     padding: 25px 5vw 25px 5vw;
     justify-content: space-around;
+    opacity: 0%;
 }
 @media only screen and (max-width: 1000px) {
-    #event {display: block}
+    .event {display: block}
     .event-container h1 {margin-right: 0; margin-bottom: 10px}
     #front-text {font-size: 5rem}
     #promotional-container h1 {font-size: 1.5rem; line-height: 3rem}
-    .highlight {font-size: 3rem; border-bottom: 5px solid whitesmoke;}
+    .highlight {font-size: 3rem; border-bottom: 5px solid var(--white)}
 }
 .sponsor-promo-wrapper {
     display: block;
@@ -128,29 +151,29 @@ body {
     display: flex;
     width: 100%;
     justify-content: space-around;
-    background-color: #161e39;
+    background-color: var(--navy-accent);
     padding: 20px;
     align-items: center;
 }
 .sponsor-promo-container h1 {
     font-size: 3rem;
-    color: whitesmoke;
+    color: var(--white);
 }
 .sponsor-promo-container svg {
     width: 50px;
     height: auto;
-    fill: whitesmoke;
+    fill: var(--white);
     transition: 0.2s;
 }
 .sponsor-promo-container:hover > svg{
-    transform: translateX(5px);
+    transform: translateX(2rem);
 }
 
 h1 > .gradient {
     background: linear-gradient(
         to right,
-        #2e7bc8,
-        rgb(71, 39, 167)
+        var(--bright-blue-2),
+        var(--purple)
     );
     background-clip: text;
     -webkit-background-clip: text;
@@ -172,7 +195,7 @@ h1 > .gradient {
 #sponsor-text > p {
     display: block;
     margin-left: 10%;
-    color: whitesmoke;
+    color: var(--white);
     font-size: 1rem;
     margin-top: 30px;
 }
@@ -189,7 +212,7 @@ h1 > .gradient {
     border: 0px solid rgb(0, 0, 0);
     border-radius: 10px;
     padding: 1vh 10px 1vh 10px;
-    background-color: rgb(18, 51, 100);
+    background-color: var(--navy-accent);
     text-align: center;
     font-size: 1.2rem;
     margin: 1vw;
@@ -246,10 +269,18 @@ div > #bronze {
     padding: 1rem;
     padding-left: 3rem;
     padding-right: 3rem;
-    color: #fff;
     z-index: 100;
     background-image: linear-gradient(rgb(3, 13, 38), rgba(255, 0, 0, 0))
 }
+
+#logo-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: gray;
+    font-size: 7px;
+}
+#logo-container h1 {margin-left: 1vw;}
 
 /* style nav items */
 #nav {
@@ -350,26 +381,29 @@ div > #bronze {
 
 .footing-container {
     display: block;
+    padding: 1.2rem;
+    background-color: var(--dark-blue-accent);
 }
 #footing {
     display: flex;
     width: 100%;
-    background-color: rgb(21, 29, 50);
     color: grey;
-    padding: 1.2rem;
     font-size: 0.8rem;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#instagram { right: 1rem; }
-#mail { right: 4rem; }
-#tiktok { right: 7rem; }
-#twitter { right: 10rem; }
+#socialMedia {
+    display: flex;
+    justify-content: space-around;
+    width: 8rem;
+}
 
 .social {
     width: 30px;
     height: 30px;
     bottom: 0.6rem;
-    fill: #2363ac;
+    fill: var(--bright-blue-3);
     transition: 0.2s;
 }
 
