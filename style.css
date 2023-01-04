@@ -2,15 +2,19 @@
     --gray: gray;
     --white: whitesmoke;
     --purple: rgb(71, 39, 167);
+    --dark-purple: #291942;
 
-    --bright-blue-1: #00AED7;
+    --bright-blue-1: #3588db;
     --bright-blue-2: #2e7bc8;
     --bright-blue-3: #2363ac;
 
-    --navy-accent: rgb(18, 51, 100);  /* Popular */
+    --navy-accent: #192841;  /* Popular */
+    --navy-accent-saturated: #07193e;
 
-    --dark-blue-bg: #111627;
-    --dark-blue-accent: #161e39;
+    --dark-blue-bg: #04060b;
+    --dark-blue-accent: #141721;
+
+    --easy-black: #030303;
 }
 
 
@@ -23,9 +27,8 @@
 }
 
 body {
-    background-color: var(--dark-blue-bg);
     height: 100%;
-    background-image: linear-gradient(to right, var(--dark-blue-bg), #141b30, var(--dark-blue-bg))
+    background-color: var(--easy-black);
 }
 
 @keyframes active {
@@ -39,7 +42,13 @@ body {
 }
 
 .active {
-    animation: active 0.3s linear 0s 1 forwards;
+    transform: translateY(0);
+    opacity: 100%;
+    transition: all 0.4s;
+}
+.inactive {
+    transform: translateY(50%);
+    opacity: 0%;
 }
 
 @keyframes appear {
@@ -69,21 +78,82 @@ body {
 #promotional-container {
     display: block;
     margin-top: 22rem;
-    margin-left: 5%;
+    margin-left: 6%;
 }
 #promotional-container h1 {
     color: var(--bright-blue-3);
     font-size: 3.5rem;
     line-height: 8rem;
-    background-image: linear-gradient(to right, rgb(22, 45, 80), rgba(255, 0, 0, 0));
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    padding-left: 2rem;
 }
 .highlight {
     color: var(--white);
     font-size: 9rem;
     border-bottom: 10px solid var(--white);
+}
+
+#about-content-wrapper {
+    display: block;
+    width: 100%;
+    justify-content: center;
+    margin-left: 10%;
+    margin-top: 22rem;
+}
+#about-content {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    color: var(--gray);
+    font-size: 2rem;
+}
+#about-content .content-highlight {
+    color: var(--white);
+}
+#button-learnmore {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+#button-learnmore a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 2rem;
+}
+#button-learnmore svg {
+    width: 25px;
+    height: auto;
+    fill: var(--white);
+    margin-left: 1rem;
+    transition: 0.2s;
+}
+#button-learnmore a:hover + svg {
+    transform: translateX(10px);
+}
+
+
+
+#front-page-content-container {
+    display: none; /* TEMPORARY */
+    width: 100%;
+    margin-top: 22rem;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.content-card {
+    width: 95%;
+    height: 50%;
+}
+.content-card img {
+    border-radius: 25px;
+    width: 100%;
+    height: 50%;
+    opacity: 80%;
+    object-fit: cover;
 }
 
 
@@ -101,19 +171,20 @@ body {
     text-align: center;
     font-size: 2em;
     width: 84%;
-    margin-top: 16rem;
+    margin-top: 22rem;
     margin-bottom: 4rem;
     border-bottom: 2px solid var(--white);
     padding-bottom: 1vh;
 }
 .event-container {
     width: 100%;
+    overflow: hidden;
 }
 .event-container img {
     height: auto;
     width: 50%;
     flex-basis: 30%;
-    border-radius: 5px;
+    border-radius: 15px;
     float: right;
 }
 .event-container h1 {
@@ -127,19 +198,24 @@ body {
     width: 70%;
     margin: auto;
     margin-bottom: 40px;
-    background-color: var(--navy-accent);
+    background-image: linear-gradient(to right bottom, var(--navy-accent-saturated), var(--dark-purple));
     border: 0px solid rgb(0, 0, 0);
-    border-radius: 5px;
+    border-radius: 35px;
     padding: 25px 5vw 25px 5vw;
     justify-content: space-around;
-    opacity: 0%;
 }
 @media only screen and (max-width: 1000px) {
+    #front-text {font-size: 7.5rem}
     .event {display: block}
     .event-container h1 {margin-right: 0; margin-bottom: 10px}
-    #front-text {font-size: 5rem}
     #promotional-container h1 {font-size: 1.5rem; line-height: 3rem}
     .highlight {font-size: 3rem; border-bottom: 5px solid var(--white)}
+    #about-content {font-size: 1.2rem}
+    #button-learnmore a {font-size: 1.2rem}
+    #button-learnmore svg {width: 15px}
+    #promotional-container {display: none}
+
+    #content-image {display: block;}
 }
 .sponsor-promo-wrapper {
     display: block;
@@ -150,8 +226,7 @@ body {
 .sponsor-promo-container {
     display: flex;
     width: 100%;
-    justify-content: space-around;
-    background-color: var(--navy-accent);
+    justify-content: center;
     padding: 20px;
     align-items: center;
 }
@@ -164,6 +239,7 @@ body {
     height: auto;
     fill: var(--white);
     transition: 0.2s;
+    margin-left: 2rem;
 }
 .sponsor-promo-container:hover > svg{
     transform: translateX(2rem);
@@ -183,7 +259,7 @@ h1 > .gradient {
 #sponsor-text > h1 {
     display: block;
     font-size: 5rem;
-    color: #2eabc8;
+    color: var(--bright-blue-1);
     margin-left: 10%;
     margin-top: 100px;
 }
@@ -257,8 +333,24 @@ div > #bronze {
 #silver svg {fill:silver}
 #bronze svg {fill:#CD7F32}
 
+
+#sponsor-info-container {
+    width: 100%;
+    display: block;
+    margin-top: 10rem;
+    text-align: center;
+}
 #sponsor-info {
-    margin-top: 100px;
+    color: var(--white);
+    text-align: left;
+    width: 90%;
+    margin-left: 5%;
+}
+#sponsor-info h1 {
+    font-size: 3rem;
+}
+#sponsor-info p {
+    font-size: 1.5rem;
 }
 
 /* style header with logo on the left and nav on the right */
@@ -270,7 +362,6 @@ div > #bronze {
     padding-left: 3rem;
     padding-right: 3rem;
     z-index: 100;
-    background-image: linear-gradient(rgb(3, 13, 38), rgba(255, 0, 0, 0))
 }
 
 #logo-container {
@@ -291,7 +382,7 @@ div > #bronze {
 }
 
 #header a {
-    color: #00AED7;
+    color: var(--bright-blue-1);
     text-decoration: none;
     transition: 0.2s;
 }
@@ -303,7 +394,7 @@ div > #bronze {
 }
 
 #nav a {
-    color: #00AED7;
+    color: var(--bright-blue-1);
     text-decoration: underline transparent;
     transition: 0.2s;
 }
@@ -365,6 +456,7 @@ div > #bronze {
     #nav{display: none} 
     #mobile-menu-icon {display: flex}
     .event-container h1 {font-size: 1.5rem}
+    #front-text {font-size: 5rem}
 }
 @media only screen and (min-width: 600px) {
     .open .mobile-menu {
@@ -396,7 +488,7 @@ div > #bronze {
 #socialMedia {
     display: flex;
     justify-content: space-around;
-    width: 8rem;
+    width: 10rem;
 }
 
 .social {

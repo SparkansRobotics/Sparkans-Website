@@ -1,9 +1,11 @@
+// Javascript
+
+
 // Scroll user to top of page on refresh
+
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }
-
-
 
 
 
@@ -12,50 +14,47 @@ window.onbeforeunload = function () {
 var char = 0;
 var text = 'Next Generation';
 var speed = 70;
-var scrolled = false;
 
 function typeEffect() {
-        if (char < text.length) {
-            document.getElementById("type-effect").innerHTML += text.charAt(char);
-            char++;
-            setTimeout(typeEffect, speed);
-        }
-}
-
-// If object in view
-
-function inView(element) {
-    var bounding = element.getBoundingClientRect();
-
-    if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
-        return true;
-    } else {
-        return false;
+    if (char < text.length) {
+        document.getElementById("type-effect").innerHTML += text.charAt(char);
+        char++;
+        setTimeout(typeEffect, speed);
     }
 }
+
+
+
+// If object in view (Better working for updated browsers)
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {   
+        if (entry.isIntersecting) {
+            entry.target.classList.replace("inactive", "active");
+        }
+    })
+})
+
+
 
 // Event elements
 
-var typeEffectElement = document.getElementById('type-effect');
-var eventElements = document.getElementsByClassName('event');
+const hiddenElements = document.querySelectorAll(".inactive");
+hiddenElements.forEach((el) => observer.observe(el));
 
-// Event Handler
 
-function eventHandler() {
-    if (inView(typeEffectElement) && !typeEffectElement.classList.contains("active")) {
+
+// Event Listeners (Type-Effect, _, _)
+
+var executed = false
+document.addEventListener("scroll", () => {
+    var bounding = document.getElementById("type-effect").getBoundingClientRect();
+
+    if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !executed) {
         typeEffect();
-        typeEffectElement.classList.add("active");
+        executed = true;
     }
-    for (var i=0; i < eventElements.length; i++) {
-        if (inView(eventElements[i]) && !eventElements[i].classList.contains("active")) {
-            eventElements[i].classList.add("active");
-        }
-    }
-}
-
-document.addEventListener("scroll", () =>  {
-    eventHandler()
-})
+});
 
 
 
@@ -66,7 +65,7 @@ var mobileMenu = document.getElementById("mobile-menu-container");
 function toggleMobileMenu(){
     mobileMenu.classList.toggle("open");
 }
-
+// --sub - Any element toggle
 function toggleElement(el) {
     el.classList.toggle("open");
 }
