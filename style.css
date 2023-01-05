@@ -1,5 +1,6 @@
 :root {
     --gray: gray;
+    --dark-gray: #151516;
     --white: whitesmoke;
     --purple: rgb(71, 39, 167);
     --dark-purple: #291942;
@@ -309,36 +310,40 @@ h1 > .gradient {
     border: 0px solid rgb(0, 0, 0);
     border-radius: 30px;
     padding: 1vh 10px 1vh 10px;
-    background-color: var(--navy-accent);
+    background-color: var(--dark-gray);
     text-align: center;
     font-size: 1.2rem;
     margin: 1vw;
     margin-bottom: 2vh;
     width: 380px;
-    height: 700px;
+    height: 600px;
     vertical-align: top;
-}
-
-div > #diamond {
     color: var(--white);
-    background-image: linear-gradient(to top right, rgb(43, 144, 199), rgb(24, 84, 187), rgb(15, 54, 180));
 }
-div > #platinum {
-    color: #f3f3f3;
-}
-div > #gold {
-    color: rgb(214, 182, 0);
-}
-div > #silver {
-    color: silver;
-}
-div > #bronze {
-    color: #CD7F32;
-}
-
-#diamond > h2 {
+.tiers h2 {
     font-size: var(--font-size-largetext);
 }
+.tiers ul {
+    text-align: left;
+    width: 340px;
+    margin-left: 20px;
+}
+.tiers ul > li {
+    margin-top: 1rem;
+    padding: 10px;
+    border: 2px solid var(--white);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+.tiers ul > li > svg {
+    max-width: 25px;
+    height: auto;
+    margin-right: 0.5rem;
+}
+.tiers .plus {fill: #4cd265}
+.tiers .upgrade {fill: #0071e3}
+.tiers .price {color: var(--gray); font-size: var(--font-size-normaltext)}
 
 
 #sponsor-info-container {
@@ -351,13 +356,14 @@ div > #bronze {
     color: var(--white);
     text-align: left;
     width: 90%;
-    margin-left: 5%;
+    margin-left: 8%;
 }
 #sponsor-info h1 {
     font-size: 3rem;
 }
 #sponsor-info p {
     font-size: 1.5rem;
+    color: var(--gray);
 }
 
 /* style header with logo on the left and nav on the right */

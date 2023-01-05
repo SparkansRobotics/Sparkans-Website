@@ -29,24 +29,6 @@ function parallax() {
 }
 
 
-// If object in view (Better working for updated browsers)
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {   
-        if (entry.isIntersecting) {
-            entry.target.classList.replace("inactive", "active");
-        }
-    })
-})
-
-
-
-// Event elements
-
-const hiddenElements = document.querySelectorAll(".inactive");
-hiddenElements.forEach((el) => observer.observe(el));
-
-
 
 // Event Listeners (Type-Effect, _, _)
 
