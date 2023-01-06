@@ -19,13 +19,16 @@
 
     /* Not colors */
 
-    --font-size-main: 10rem;
-    --font-size-submain: 8rem;
+    --font-size-hero: 10rem;
+    --font-size-subhero: 8rem;
+    --font-size-main: 6rem;
+    --font-size-submain: 4rem;
     --font-size-largetext: 3.5rem;
     --font-size-normaltext: 2rem;
-    --font-size-smalltext: 1rem;
+    --font-size-smalltext: 1.2rem;
 
     --section-spacing: 22rem;
+    --div-spacing: 10rem;
     --display: flex;
 }
 
@@ -78,7 +81,7 @@ body {
     margin-top: 15rem;
     text-align: center;
     align-items: center;
-    font-size: 10rem;
+    font-size: var(--font-size-hero);
     animation: appear 1.2s cubic-bezier(.06,.62,.58,1) 0.2s 1 forwards;
     overflow-y: hidden;
     opacity: 0%;
@@ -95,11 +98,11 @@ body {
 #promotional-container h1 {
     color: var(--bright-blue-3);
     font-size: 3.5rem;
-    line-height: 8rem;
+    line-height: 7rem;
 }
 .highlight {
     color: var(--white);
-    font-size: 9rem;
+    font-size: var(--font-size-hero);
     border-bottom: 10px solid var(--white);
     text-shadow: 0 0 100px rgba(255, 255, 255, 0.3);
 }
@@ -219,22 +222,8 @@ body {
     padding: 25px 5vw 25px 5vw;
     justify-content: space-around;
 }
-@media only screen and (max-width: 1000px) {
-    #front-text {font-size: 7.5rem}
-    .event {display: block}
-    .event-container h1 {margin-right: 0; margin-bottom: 10px}
-    #promotional-container h1 {font-size: 1.5rem; line-height: 3rem}
-    .highlight {font-size: 3rem; border-bottom: 5px solid var(--white)}
-    #about-content {font-size: 1.2rem}
-    #button-learnmore a {font-size: 1.2rem}
-    #button-learnmore svg {width: 15px}
-    #promotional-container {display: none}
 
-    #parallax-images {margin-top: 15rem; height: 50rem}
-    #parallax-container {display: block}
-    .parallax {position: static; margin-top: 1rem; width: 90%; height: 15rem}
 
-}
 .sponsor-promo-wrapper {
     display: block;
 }
@@ -276,16 +265,12 @@ h1 > .gradient {
 }
 #sponsor-text > h1 {
     display: block;
-    font-size: 5rem;
+    font-size: var(--font-size-main);
     color: var(--bright-blue-1);
     margin-left: 8%;
     margin-top: 100px;
 }
-@media only screen and (max-width: 1000px) {
-    #sponsor-text > h1 {font-size: 10vw}
-    .sponsor-promo-container h1 {font-size: 2rem}
-    .sponsor-promo-container svg {width: 40px}
-}
+
 #sponsor-text > p {
     display: block;
     margin-left: 8%;
@@ -312,7 +297,7 @@ h1 > .gradient {
     padding: 1vh 10px 1vh 10px;
     background-color: var(--dark-gray);
     text-align: center;
-    font-size: 1.2rem;
+    font-size: var(--font-size-smalltext);
     margin: 1vw;
     margin-bottom: 2vh;
     width: 380px;
@@ -322,6 +307,8 @@ h1 > .gradient {
 }
 .tiers h2 {
     font-size: var(--font-size-largetext);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .tiers ul {
     text-align: left;
@@ -341,15 +328,56 @@ h1 > .gradient {
     height: auto;
     margin-right: 0.5rem;
 }
-.tiers .plus {fill: #4cd265}
-.tiers .upgrade {fill: #0071e3}
-.tiers .price {color: var(--gray); font-size: var(--font-size-normaltext)}
+.tiers-wrapper .plus {fill: #4cd265}
+.tiers-wrapper .upgrade {fill: #0071e3}
+.tiers-wrapper .price {color: var(--gray); font-size: var(--font-size-normaltext)}
+
+.tiers-wrapper > h2 {
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -2rem;
+}
+.tiers-wrapper h2 > svg {
+    max-width: 30px;
+    height: auto;
+    margin-left: 2rem;
+    margin-right: 0.3rem;
+}
+
+
+
+#sponsor-options-container {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: var(--div-spacing);
+}
+#sponsor-options {
+    width: 90%;
+    margin-left: 5%;
+}
+#sponsor-options img {
+    width: 45%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    opacity: 70%;
+    transition: 0.2s;
+}
+#sponsor-options img:hover {
+    opacity: 100%;
+}
+
+
+
 
 
 #sponsor-info-container {
     width: 100%;
     display: block;
-    margin-top: 10rem;
+    margin-top: var(--div-spacing);
     text-align: center;
 }
 #sponsor-info {
@@ -359,12 +387,68 @@ h1 > .gradient {
     margin-left: 8%;
 }
 #sponsor-info h1 {
-    font-size: 3rem;
+    font-size: var(--font-size-submain);
 }
 #sponsor-info p {
-    font-size: 1.5rem;
+    font-size: var(--font-size-normaltext);
     color: var(--gray);
 }
+
+
+#sponsor-display-container {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+#sponsor-display {
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+}
+#sponsor-display > div {
+    margin-bottom: 5rem;
+    color: var(--gray);
+    font-size: var(--font-size-smalltext);
+}
+#sponsor-display > div > h1 {
+    font-size: var(--font-size-largetext);
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+.sponsor {
+    display: inline-block;
+    margin: 1rem;
+    color: var(--white);
+    background-color: var(--dark-blue-accent);
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+.sponsor img {
+    width: 320px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+#display-bronze > h2 {
+    display: inline-block;
+    margin: 1rem;
+    color: var(--white);
+    background-color: var(--dark-blue-accent);
+    padding: 1rem;
+    border-radius: 15px;
+    font-size: var(--font-size-smalltext);
+}
+
+
+
+
+
+
+
+
+
 
 /* style header with logo on the left and nav on the right */
 #header {
@@ -464,18 +548,6 @@ h1 > .gradient {
 .mobile-menu li {
     margin-bottom: 10px;
 }
-
-@media only screen and (max-width: 600px) {
-    #nav{display: none} 
-    #mobile-menu-icon {display: flex}
-    .event-container h1 {font-size: 1.5rem}
-    #front-text {font-size: 5rem}
-}
-@media only screen and (min-width: 600px) {
-    .open .mobile-menu {
-        display: none;
-    }
-}
 @keyframes dropDown {
     from {
         height: 0px;
@@ -516,4 +588,42 @@ h1 > .gradient {
     transform: translateY(-2px);
     transition: 0.2s;
     fill: #2d7edb;
+}
+
+
+
+
+
+/* ALL MEDIA QUERIES */
+
+@media only screen and (max-width: 1000px) {  /* IPAD */
+    #front-text {font-size: 7.5rem}
+    .event {display: block}
+    .event-container h1 {margin-right: 0; margin-bottom: 10px}
+    #promotional-container h1 {font-size: 1.5rem; line-height: 3rem}
+    .highlight {font-size: 3rem; border-bottom: 5px solid var(--white)}
+    #about-content {font-size: 1.2rem}
+    #button-learnmore a {font-size: 1.2rem}
+    #button-learnmore svg {width: 15px}
+    #promotional-container {display: none}
+
+    #parallax-images {margin-top: 15rem; height: 50rem}
+    #parallax-container {display: block}
+    .parallax {position: static; margin-top: 1rem; width: 90%; height: 15rem}
+
+    #sponsor-text > h1 {font-size: 10vw}
+    .sponsor-promo-container h1 {font-size: 2rem}
+    .sponsor-promo-container svg {width: 40px}
+}
+
+@media only screen and (max-width: 600px) { /* IPHONE */
+    #nav{display: none} 
+    #mobile-menu-icon {display: flex}
+    .event-container h1 {font-size: 1.5rem}
+    #front-text {font-size: 5rem}
+}
+@media only screen and (min-width: 600px) { 
+    .open .mobile-menu {
+        display: none;
+    }
 }
