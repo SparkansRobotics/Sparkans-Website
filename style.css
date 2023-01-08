@@ -419,6 +419,50 @@ h1 > .gradient {
     margin-bottom: 1rem;
 }
 
+#about h1{
+    color: #3588DB;
+    text-align: center;
+    font-size: var(--font-size-main);
+    padding-top: 2rem;
+}
+
+.TheTeam{
+    display: inline-block;
+    margin: 1rem;
+    color: var(--white);
+    background-color: var(--dark-blue-accent);
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.TheTeam img{
+    width: 320px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+#VM p{
+    color: white;
+    font-size: var(--font-size-normaltext);
+    text-align: center;
+    padding-top: 3rem;
+}
+
+#missionH3{
+    color: #3588DB;
+    font-size: var(--font-size-normaltext);
+    text-align: center;
+    padding-top: 5rem;
+}
+
+#visionP{
+    color: white;
+    font-size: var(--font-size-normaltext);
+}
+
+
 
 .sponsor {
     display: inline-block;
