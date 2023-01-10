@@ -112,14 +112,14 @@ body {
 
 
 
-#about-content-wrapper {
+#front-about-content-wrapper {
     display: block;
     width: 100%;
     justify-content: center;
     margin-left: 10%;
     margin-top: 22rem;
 }
-#about-content {
+#front-about-content {
     display: flex;
     justify-content: center;
     width: 80%;
@@ -307,6 +307,13 @@ h1 > .gradient {
     vertical-align: top;
     color: var(--white);
 }
+
+#diamond h2 {color: rgb(36, 157, 238)}
+#platinum h2 {color: rgb(241, 241, 241)}
+#gold h2 {color: rgb(255, 204, 0)}
+#silver h2 {color: silver}
+#bronze h2 {color: rgb(205, 103, 20)}
+
 .tiers h2 {
     font-size: var(--font-size-largetext);
     margin-top: 1rem;
@@ -418,6 +425,48 @@ h1 > .gradient {
     color: var(--white);
     margin-bottom: 1rem;
 }
+
+#about-container h1{
+    color: #3588DB;
+    text-align: center;
+    font-size: var(--font-size-main);
+    margin-top: 3rem;
+}
+
+#about-img img{
+    width: 320px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 1rem;
+}
+
+#about-img {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#about-content {
+    margin: 3rem;
+    display: block;
+}
+
+#about-content p {
+    color: white;
+    font-size: var(--font-size-normaltext);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#about-content h1 {
+    color: #3588DB;
+    font-size: var(--font-size-normaltext);
+    text-align: center;
+    margin-top: 3rem;
+}
+
 
 
 .sponsor {
