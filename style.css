@@ -98,7 +98,7 @@ body {
 
 #promotional-container {
     display: block;
-    margin-top: 60vh;
+    margin-top: 55vh;
     margin-left: 10%;
 }
 #promotional-container h1 {
@@ -115,14 +115,14 @@ body {
 
 
 
-#about-content-wrapper {
+#front-about-content-wrapper {
     display: block;
     width: 100%;
     justify-content: center;
     margin-left: 10%;
     margin-top: 22rem;
 }
-#about-content {
+#front-about-content {
     display: flex;
     justify-content: center;
     width: 80%;
@@ -158,7 +158,7 @@ body {
 #parallax-images {
     display: block;
     width: 100%;
-    margin-top: 22rem;
+    margin-top: 14rem;
     position: relative;
     height: 100rem;
     overflow: hidden;
@@ -178,7 +178,7 @@ body {
     object-fit: cover;
 }
 #parallax-lowUp {left: 3%}
-#parallax-lowDown {left: 33%}
+#parallax-lowDown {right: 3%}
 #parallax-highUp {right: 3%}
 
 
@@ -192,9 +192,9 @@ body {
 #event-container-divider {
     color: var(--white);
     text-align: center;
-    font-size: var(--font-size-normaltext);
+    font-size: var(--font-size-largetext);
     width: 84%;
-    margin-top: 22rem;
+    margin-top: 18rem;
     margin-bottom: 4rem;
     border-bottom: 2px solid var(--white);
     padding-bottom: 1vh;
@@ -219,6 +219,7 @@ body {
     display: flex;
     align-items: center;
     width: 70%;
+    max-width: 1000px;
     margin: auto;
     margin-bottom: 20px;
     background-image: linear-gradient(to right bottom, var(--navy-accent-saturated), var(--dark-purple));
@@ -328,7 +329,38 @@ h1 > .gradient {
     height: 600px;
     vertical-align: top;
     color: var(--white);
+    border-top-width: 6px;
+    border-bottom-width: 6px;
+    border-radius: 0.75rem;
 }
+
+#diamond {
+    border-color: rgb(36, 157, 238);
+    background: linear-gradient(160deg, var(--dark-gray) 60%, rgb(20, 53, 75) 100%)
+}
+#platinum {
+    border-color: rgb(241, 241, 241);
+    background: linear-gradient(160deg, var(--dark-gray) 60%, rgb(63, 63, 63) 100%)
+}
+#gold {
+    border-color: rgb(255, 204, 0);
+    background: linear-gradient(160deg, var(--dark-gray) 60%, rgb(68, 58, 20) 100%)
+}
+#silver {
+    border-color: silver;
+    background: linear-gradient(160deg, var(--dark-gray) 60%, rgb(48, 48, 48) 100%)
+}
+#bronze {
+    border-color: rgb(205, 103, 20);
+    background: linear-gradient(160deg, var(--dark-gray) 60%, rgb(59, 32, 9) 100%)
+}
+
+#diamond h2 {color: rgb(36, 157, 238)}
+#platinum h2 {color: rgb(241, 241, 241)}
+#gold h2 {color: rgb(255, 204, 0)}
+#silver h2 {color: silver}
+#bronze h2 {color: rgb(205, 103, 20)}
+
 .tiers h2 {
     font-size: var(--font-size-largetext);
     margin-top: 1rem;
@@ -372,29 +404,6 @@ h1 > .gradient {
 
 
 
-#sponsor-options-container {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-top: var(--div-spacing);
-}
-#sponsor-options {
-    width: 90%;
-    margin-left: 5%;
-}
-#sponsor-options img {
-    width: 45%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 15px;
-    opacity: 70%;
-    transition: 0.2s;
-}
-#sponsor-options img:hover {
-    opacity: 100%;
-}
-
-
 
 
 
@@ -413,10 +422,9 @@ h1 > .gradient {
 }
 #sponsor-info h1 {
     font-size: var(--font-size-submain);
-}
-#sponsor-info p {
-    font-size: var(--font-size-normaltext);
-    color: var(--gray);
+    width: 84%;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--white);
 }
 
 
@@ -440,6 +448,47 @@ h1 > .gradient {
     color: var(--white);
     margin-bottom: 1rem;
 }
+
+#about-container h1{
+    color: #3588DB;
+    text-align: center;
+    font-size: var(--font-size-main);
+    margin-top: 3rem;
+}
+
+#about-img img{
+    width: 320px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 1rem;
+}
+
+#about-img {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#about-content {
+    margin: 3rem;
+    display: block;
+}
+
+#about-content p {
+    color: white;
+    font-size: var(--font-size-normaltext);
+    margin-top: 1rem;
+}
+
+#about-content h1 {
+    color: #3588DB;
+    font-size: var(--font-size-largetext);
+    text-align: center;
+    margin-top: 3rem;
+}
+
 
 
 .sponsor {
@@ -474,10 +523,6 @@ h1 > .gradient {
 
 
 
-
-
-
-
 /* style header with logo on the left and nav on the right */
 #header {
     display: flex;
@@ -497,6 +542,13 @@ h1 > .gradient {
     font-size: var(--font-size-xsmalltext);
 }
 #logo-container p {margin-left: 1vw;}
+
+#theme-mode {
+    background-color: var(--white);
+    padding: 0.4rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 /* style nav items */
 #nav {
@@ -525,7 +577,7 @@ h1 > .gradient {
 }
 
 #nav a:hover {
-    border-bottom: 3px solid lightskyblue;
+    border-bottom: 3px solid var(--bright-blue-1);
     transform: translateY(-1px);
     color: #fff;
     transition: 0.2s;
@@ -587,7 +639,6 @@ h1 > .gradient {
 .footing-container {
     display: block;
     padding: 1.2rem;
-    background-color: var(--dark-blue-accent);
 }
 #footing {
     display: flex;
@@ -650,7 +701,7 @@ h1 > .gradient {
     .event-container h1 {margin-right: 0; margin-bottom: 10px}
     #promotional-container h1 {font-size: 1.5rem; line-height: 3rem}
     .highlight {font-size: 3rem; border-bottom: 5px solid var(--white)}
-    #about-content {font-size: 1.2rem}
+    #front-about-content {font-size: 1.2rem}
     #button-learnmore a {font-size: 1.2rem}
     #button-learnmore svg {width: 15px}
     #promotional-container {display: none}
@@ -663,7 +714,7 @@ h1 > .gradient {
     #nav{display: none} 
     #mobile-menu-icon {display: flex}
     .event-container h1 {font-size: 1.5rem}
-    #front-text {font-size: 4.8rem}
+    #front-text {font-size: 4.6rem}
 
     #sponsor-text > h1 {font-size: 4rem}
     #sponsor-text > p {font-size: 1.2rem}

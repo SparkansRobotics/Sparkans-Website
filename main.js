@@ -9,9 +9,13 @@ window.onbeforeunload = function () {
 // Mobile menu toggle
 
 var mobileMenu = document.getElementById("mobile-menu-container");
+var themeBody = document.querySelector("body");
 
 function toggleMobileMenu(){
     mobileMenu.classList.toggle("open");
+}
+function toggleTheme(){
+    themeBody.classList.toggle("open");
 }
 // --sub - Any element toggle
 function toggleElement(el) {
