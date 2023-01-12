@@ -613,9 +613,23 @@ h1 > .gradient {
     fill: #2d7edb;
 }
 
+#contactSocials {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size-normaltext);
+    margin-left: 8%;
+}
 
+.contactSocial {
+    display: flex;
+    align-items: center;
+}
 
-
+.contactSocial > svg {
+    width: 30px;
+    fill: var(--bright-blue-2);
+    margin-right: 0.5rem;
+}
 
 /* ALL MEDIA QUERIES */
 
@@ -670,12 +684,6 @@ h1 > .gradient {
 @media only screen and (max-width: 320px) {
     * {overflow-x: show;}
     #logo-container p {display: none}
-}
-
-#contactSocials {
-    display: block;
-    font-size: var(--font-size-normaltext);
-    margin-left: 8%;
 }
 
 #contactSocials a {
