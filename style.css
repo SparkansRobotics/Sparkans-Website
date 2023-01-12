@@ -674,11 +674,13 @@ h1 > .gradient {
     flex-direction: column;
     font-size: var(--font-size-normaltext);
     margin-left: 8%;
+    width: 84%
 }
 
 .contactSocial {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .contactSocial > svg {
