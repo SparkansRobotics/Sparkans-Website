@@ -46,12 +46,9 @@
 
 body {
     height: 100%;
-    background: linear-gradient(176deg,var(--easy-black) 40%,rgb(16, 20, 27) 100%);
-    background-attachment: fixed;
-}
-
-body.open {
-    background: linear-gradient(176deg, #fff 60%,rgb(138, 162, 206) 100%);
+    background: linear-gradient(176deg,var(--easy-black) 40%,rgb(27, 33, 45) 100%);
+    cursor: default;
+    user-select: none;
     background-attachment: fixed;
 }
 
@@ -289,7 +286,26 @@ h1 > .gradient {
     width: 84%;
 }
 
+#contact-text {
+    min-height: 82vh;
+}
 
+#contact-text > h1 {
+    display: block;
+    font-size: var(--font-size-main);
+    color: var(--bright-blue-1);
+    margin-left: 8%;
+    margin-top: 100px;
+}
+
+#contact-text > p {
+    display: block;
+    margin-left: 8%;
+    color: var(--gray);
+    font-size: var(--font-size-normaltext);
+    margin-top: 30px;
+    width: 84%;
+}
 
 .tiers-wrapper {
     text-align: center;
@@ -653,9 +669,23 @@ h1 > .gradient {
     fill: #2d7edb;
 }
 
+#contactSocials {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size-normaltext);
+    margin-left: 8%;
+}
 
+.contactSocial {
+    display: flex;
+    align-items: center;
+}
 
-
+.contactSocial > svg {
+    width: 30px;
+    fill: var(--bright-blue-2);
+    margin-right: 0.5rem;
+}
 
 /* ALL MEDIA QUERIES */
 
@@ -688,6 +718,8 @@ h1 > .gradient {
 
     #sponsor-text > h1 {font-size: 4rem}
     #sponsor-text > p {font-size: 1.2rem}
+    #contact-text > h1 {font-size: 4rem}
+    #contact-text > p {font-size: 1.2rem}
     #sponsor-info h1 {font-size: 3rem}
     #sponsor-info p {font-size: 1.5rem}
     #sponsor-display > div > h1 {font-size: 2.5rem}
@@ -708,4 +740,26 @@ h1 > .gradient {
 @media only screen and (max-width: 320px) {
     * {overflow-x: show;}
     #logo-container p {display: none}
+}
+
+#contactSocials a {
+    color: var(--bright-blue-1);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+#contactSocials a:hover {
+    color: #fff;
+    transition: 0.2s;
+}
+
+#contact-text a {
+    color: var(--bright-blue-1);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+#contact-text a:hover {
+    color: #fff;
+    transition: 0.2s;
 }
