@@ -45,10 +45,11 @@
 }
 
 body {
-    height: 100%;
-    background-color: var(--easy-black);
+    min-height: 100vh;
+    background: linear-gradient(169deg, rgb(18,24,27) 50%, rgb(30, 36, 51) 100%);
     cursor: default;
     user-select: none;
+    background-attachment: fixed;
 }
 
 @keyframes active {
