@@ -205,10 +205,12 @@ body {
 }
 .event-container img {
     height: auto;
+    max-height: 18vh;
     width: 50%;
     flex-basis: 30%;
     border-radius: 15px;
     float: right;
+    object-fit: cover;
 }
 .event-container h1 {
     color: var(--white);
@@ -326,7 +328,7 @@ h1 > .gradient {
     margin: 1vw;
     margin-bottom: 2vh;
     width: 380px;
-    height: 600px;
+    height: 500px;
     vertical-align: top;
     color: var(--white);
     border-top-width: 6px;
@@ -387,20 +389,6 @@ h1 > .gradient {
 .tiers-wrapper .plus {fill: #4cd265}
 .tiers-wrapper .upgrade {fill: #0071e3}
 .tiers-wrapper .price {color: var(--gray); font-size: var(--font-size-normaltext)}
-
-.tiers-wrapper > h2 {
-    color: var(--white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: -2rem;
-}
-.tiers-wrapper h2 > svg {
-    max-width: 30px;
-    height: auto;
-    margin-left: 2rem;
-    margin-right: 0.3rem;
-}
 
 
 
