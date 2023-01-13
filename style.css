@@ -461,13 +461,13 @@ h1 > .gradient {
 }
 
 #about-content p {
-    color: white;
+    color: var(--gray);
     font-size: var(--font-size-normaltext);
     margin-top: 1rem;
 }
 
 #about-content h1 {
-    color: #3588DB;
+    color: var(--bright-blue-1);
     font-size: var(--font-size-largetext);
     text-align: center;
     margin-top: 3rem;
@@ -638,6 +638,10 @@ h1 > .gradient {
 #footing > div {
     margin: 1rem;
 }
+#footer-alt-text {
+    width: 70%;
+    margin-left: 15% !important;
+}
 
 #footer-divider {
     display: block;
@@ -739,7 +743,7 @@ h1 > .gradient {
 
     #sponsor-text > h1 {font-size: 4rem}
     #sponsor-text > p {font-size: 1.2rem}
-    #contact-text > h1 {font-size: 3.5rem}
+    #contact-text > h1 {font-size: 3.2rem}
     #contact-text > p {font-size: 1.2rem}
     #sponsor-info h1 {font-size: 3rem}
     #sponsor-info p {font-size: 1.5rem}
@@ -753,6 +757,9 @@ h1 > .gradient {
     #sponsor-display > div {font-size: 1rem}
 
     .sponsor-promo-container h1 {font-size: 2rem}
+    #about-container h1 {font-size: 3.2rem}
+    #about-content p {font-size: 1.2rem}
+    #about-content h1 {font-size: 2rem}
 }
 @media only screen and (min-width: 640px) { 
     .open .mobile-menu {
