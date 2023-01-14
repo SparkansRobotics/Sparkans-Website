@@ -168,19 +168,35 @@ body {
     height: auto;
     display: flex;
     text-align: center;
+    flex-direction: column;
 }
 .parallax {
-    width: 50rem;
+    width: 90%;
     height: 25rem;
     position: absolute;
     top: 50%;
-    border-radius: 10px;
-    object-fit: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    word-wrap: break-word;
+    text-align: center;
 }
-#parallax-lowUp {left: 3%}
-#parallax-lowDown {left: 33%}
-#parallax-highUp {right: 3%}
+.parallax > img {
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+.parallax > p {
+    width: 45%;
+    height: auto;
+    color: white;
+}
 
+#parallax-lowUp {left: 3%}
+#parallax-lowDown {right: 3%}
+#parallax-highUp {right: 3%}
 
 .event-divider-wrapper {
     display: block;
