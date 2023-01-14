@@ -171,6 +171,7 @@ body {
     flex-direction: column;
 }
 .parallax {
+    color: var(--gray);
     width: 90%;
     height: 25rem;
     position: absolute;
@@ -178,21 +179,28 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    word-wrap: break-word;
-    text-align: center;
+}
+.parallax > div {
+    max-width: 45%;
 }
 .parallax > img {
-    width: 45%;
-    height: 100%;
+    width: 55%;
+    height: 90%;
     object-fit: cover;
     flex-wrap: wrap;
     border-radius: 10px;
 }
-.parallax > p {
-    width: 45%;
+.parallax > div > p {
     height: auto;
-    color: white;
+    text-align: left;
+    font-size: var(--font-size-normaltext);
 }
+.parallax > div > h1 {
+    color: var(--white);
+    font-size: var(--font-size-largetext);
+}
+
+.mobileshow {display: none}
 
 #parallax-lowUp {left: 3%}
 #parallax-lowDown {right: 3%}
@@ -654,10 +662,10 @@ h1 > .gradient {
 
 /* ALL MEDIA QUERIES */
 
-@media only screen and (max-width: 1250px) {
-    #parallax-images {margin-top: 15rem; height: 50rem}
-    #parallax-container {display: block}
-    .parallax {position: static; margin-top: 1rem; width: 90%; height: 15rem}
+@media only screen and (max-width: 1200px) {
+    #parallax-images {margin-top: 15rem; height: auto}
+    #parallax-container {display: block; margin-left: 5%}
+    .parallax {position: static; margin-top: 2rem; width: 90%; height: 15rem}
 }
 
 @media only screen and (max-width: 1000px) {  /* IPAD */
@@ -673,7 +681,11 @@ h1 > .gradient {
 
     .sponsor-promo-container h1 {font-size: 2rem}
     .sponsor-promo-container svg {width: 40px}
+
+    .parallax > div > p {font-size: 1.2rem}
+    .parallax > div > h1 {font-size: 2rem}
 }
+
 
 @media only screen and (max-width: 640px) { /* IPHONE */
     #nav{display: none} 
@@ -695,6 +707,14 @@ h1 > .gradient {
 
     .sponsor img {width: 60vw; max-width: 320px}
     #sponsor-display > div {font-size: 1rem}
+
+    #parallax-images {margin-top: 10rem}
+    #parallax-container {display: block}
+    .parallax {display: block; position: static; margin-top: 1rem; width: 90%; height: 100%; text-align: center}
+    .parallax > div {max-width: 100%}
+    .parallax > img {margin-top: 1rem; width: 90%; height: 50%}
+    .mobileshow {display: block}
+    .mobilehide {display: none}
 }
 @media only screen and (min-width: 640px) { 
     .open .mobile-menu {
