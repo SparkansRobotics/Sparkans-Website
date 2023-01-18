@@ -84,7 +84,7 @@ body {
 
 #front-text {
     display: block;
-    margin-top: 30vh;
+    margin-top: 33vh;
     text-align: center;
     align-items: center;
     font-size: var(--font-size-hero);
@@ -111,8 +111,14 @@ body {
     font-size: var(--font-size-hero);
     border-bottom: 10px solid var(--white);
 }
-
-
+.anchor-style {
+    text-decoration: none;
+    color: var(--bright-blue-1);
+    transition: 0.2s;
+}
+.anchor-style:hover {
+    color: var(--white);
+}
 
 
 #front-about-content-wrapper {
