@@ -516,7 +516,6 @@ h1 > .gradient {
     max-height: 200px;
     overflow: hidden;
 }
-.sponsor p {color: var(--gray)}
 .sponsor h1 {font-size: 1.8rem}
 
 .sponsor img {
@@ -524,14 +523,13 @@ h1 > .gradient {
     height: auto;
     object-fit: cover;
     border-radius: 5px;
-    margin-bottom: 1rem;
 }
 
-#display-diamond h1 {color: rgb(36, 157, 238) !important}
-#display-platinum h1 {color: rgb(241, 241, 241) !important}
-#display-gold h1 {color: rgb(255, 204, 0) !important}
-#display-silver h1 {color: silver !important}
-#display-bronze h1 {color: rgb(205, 103, 20) !important}
+#display-diamond > h1 {color: rgb(36, 157, 238) !important}
+#display-platinum > h1 {color: rgb(241, 241, 241) !important}
+#display-gold > h1 {color: rgb(255, 204, 0) !important}
+#display-silver > h1 {color: silver !important}
+#display-bronze > h1 {color: rgb(205, 103, 20) !important}
 
 
 #display-bronze > h2 {
@@ -544,11 +542,13 @@ h1 > .gradient {
     font-size: var(--font-size-smalltext);
 }
 
-#sponsor-links {
+#sponsor-links-wrapper {
+    margin-top: 3rem;
     width: 80%;
     margin-left: 10%;
+}
+#sponsor-links {
     text-align: center;
-    margin-top: 3rem;
     background-color: var(--dark-blue-accent);
     padding: 1rem;
     border-radius: 20px;
