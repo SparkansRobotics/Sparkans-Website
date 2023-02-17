@@ -515,6 +515,7 @@ h1 > .gradient {
     max-width: 320px;
     max-height: 200px;
     overflow: hidden;
+    vertical-align: middle;
 }
 .sponsor h1 {font-size: 1.8rem}
 
@@ -557,14 +558,6 @@ h1 > .gradient {
     color: var(--gray);
     font-size: 2rem;
 }
-#sponsor-links a {
-    color: var(--bright-blue-1);
-    text-decoration: none;
-    transition: 0.2s;
-}
-#sponsor-links a:hover {
-    color: var(--white);
-}
 
 
 #sponsor-buttons-wrapper{
@@ -587,8 +580,6 @@ h1 > .gradient {
     border-right: 5px solid var(--white);
     background-color: var(--dark-gray);
     font-size: 3rem;
-    text-decoration: none;
-    color: var(--bright-blue-1);
 }
 
 
