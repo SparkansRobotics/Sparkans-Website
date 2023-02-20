@@ -13,24 +13,9 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://sparkans-robotics.ca/about</loc>
-  <lastmod>2023-02-17T18:13:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://sparkans-robotics.ca/contacts</loc>
-  <lastmod>2023-02-17T18:13:41+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://sparkans-robotics.ca/sponsors</loc>
   <lastmod>2023-02-17T18:13:41+00:00</lastmod>
   <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://sparkans-robotics.ca/Graphics/Sponsor%20Package.pdf</loc>
-  <lastmod>2023-02-17T18:13:41+00:00</lastmod>
-  <priority>0.64</priority>
 </url>
 
 
