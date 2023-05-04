@@ -16,6 +16,7 @@
     --dark-blue-accent: #141721;
 
     --easy-black: #030303;
+    --background-gradient: rgb(16, 20, 27);
 
     /* Not colors */
 
@@ -46,7 +47,7 @@
 
 body {
     height: 100%;
-    background: linear-gradient(176deg,var(--easy-black) 40%,rgb(16, 20, 27) 100%);
+    background: linear-gradient(176deg,var(--easy-black) 40%, var(--background-gradient) 100%);
     cursor: default;
     background-attachment: fixed;
 }
@@ -79,6 +80,62 @@ body {
         transform: translateY(0%);
         opacity: 100%;
     }
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+    overflow: hidden;
+}
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bright-blue-3);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .slider {
+    background-color: rgb(142, 178, 199);
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+}
+  
+.slider.round {
+border-radius: 17px;
+}
+  
+.slider.round:before {
+border-radius: 50%;
 }
 
 #front-text {
@@ -593,6 +650,7 @@ h1 > .gradient {
     padding-left: 3rem;
     padding-right: 3rem;
     z-index: 100;
+    background-color: none;
 }
 
 #logo-container {
