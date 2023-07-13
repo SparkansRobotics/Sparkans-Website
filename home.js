@@ -15,21 +15,6 @@ function typeEffect() {
 }
 
 
-
-// Parallax
-
-function parallax() {
-	var pLowUp = document.getElementById("parallax-lowUp");
-    var pLowDown = document.getElementById("parallax-lowDown");
-    var pHighUp = document.getElementById("parallax-highUp");
-
-    pLowUp.style.top = 50 - window.pageYOffset/150 + "%";
-    pLowDown.style.top = 50 + window.pageYOffset/200 + "%";
-    pHighUp.style.top = 50 - window.pageYOffset/50 + "%";
-}
-
-
-
 // Event Listeners (Type-Effect, _, _)
 
 var executed = false
@@ -40,8 +25,4 @@ document.addEventListener("scroll", () => {
         typeEffect();
         executed = true;
     }
-});
-
-window.addEventListener("scroll", function() {
-	parallax();	
 });
