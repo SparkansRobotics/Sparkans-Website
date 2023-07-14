@@ -4,11 +4,12 @@
 
 var char = 0;
 var text = 'Innovators';
-var speed = 70;
+var speed = 100;
+var type = document.getElementById("type-effect");
 
 function typeEffect() {
     if (char < text.length) {
-        document.getElementById("type-effect").innerHTML += text.charAt(char);
+        type.innerHTML += text.charAt(char);
         char++;
         setTimeout(typeEffect, speed);
     }
@@ -19,10 +20,12 @@ function typeEffect() {
 
 var executed = false
 document.addEventListener("scroll", () => {
-    var bounding = document.getElementById("type-effect").getBoundingClientRect();
+    var bounding = type.getBoundingClientRect();
 
     if (bounding.top >= 0 && bounding.bottom <= window.innerHeight && !executed) {
         typeEffect();
         executed = true;
+    } else if (!type.classList.contains("executed") && executed) {
+        type.classList.add("executed");
     }
 });
