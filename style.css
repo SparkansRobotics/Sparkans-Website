@@ -247,14 +247,26 @@ nav a:hover {
     height: 100%;
 }
 
+/* Double down chevrons */
+#more {
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    margin-left: calc(50vw - 2.5rem);
+    fill: var(--bright-blue-3);
+    position: absolute;
+    bottom: 2rem;
+}
+
 /* Hero "Sparkans" text */
 
 #front-text {
     display: block;
-    margin-top: 33vh;
+    position: absolute;
+    width: 100%;
+    top: calc(50% - var(--font-size-hero) / 2);
     margin-bottom: 20vh;
     text-align: center;
-    align-items: center;
     font-size: var(--font-size-hero);
     animation: appear 1.2s cubic-bezier(.06,.62,.58,1) 0.2s 1 forwards;
     overflow: hidden;
@@ -263,6 +275,17 @@ nav a:hover {
     z-index: 5;
     color: white;
 }
+#front-text > *{
+    display: inline-block;
+    width: 100%;
+}
+#front-text > span > span {
+    display: block;
+    width: 100%;
+    font-size: var(--font-size-largetext);
+}
+#front-text > span > span::before {content: "• "}
+#front-text > span > span::after {content: " •"}
 h1 > .gradient {
     background: linear-gradient(
         to right,
@@ -273,15 +296,6 @@ h1 > .gradient {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
-}
-
-/* Double down chevrons */
-#more {
-    height: 5rem;
-    width: 5rem;
-    display: flex;
-    margin-left: calc(50vw - 2.5rem);
-    fill: var(--bright-blue-3);
 }
 
 main {
@@ -437,14 +451,16 @@ main {
     text-align: left;
 }
 .event-container img {
-    width: 375px;
+    max-width: 400px;
+    width: 90vw;
     height: 280px;
     object-fit: cover;
     border-radius: 6px;
 }
 .event-fade {
     background: linear-gradient(0deg, var(--easy-black) 10%, rgb(0, 0, 0, 0) 80%);
-    width: 375px;
+    max-width: 400px;
+    width: 90vw;
     height: 280px;
     border-radius: 6px;
     z-index: 1;
@@ -478,9 +494,8 @@ main {
 /* Sponsor button/promo */
 .sponsor-promo-wrapper {
     display: block;
-}
-.sponsor-promo-wrapper a {
-    text-decoration: none;
+    background: linear-gradient(150deg, rgb(0, 0, 0, 0)20%, rgb(20, 53, 75) 100%);
+    margin-top: 5rem;
 }
 .sponsor-promo-container {
     display: flex;
@@ -489,9 +504,10 @@ main {
     padding: 20px;
     align-items: center;
 }
-.sponsor-promo-container h1 {
+.sponsor-promo-container a {
     font-size: var(--font-size-largetext);
     color: var(--white);
+    text-decoration: none;
 }
 .sponsor-promo-container svg {
     width: 50px;
@@ -785,39 +801,26 @@ main {
 /* _____ ABOUT PAGE _____ */
 
 /* About content */
-#about-container h1{
-    color: #3588DB;
-    text-align: center;
-    font-size: var(--font-size-main);
-    margin-top: 3rem;
-}
-#about-img img{
-    width: 320px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    display: inline-block;
-    margin: 1rem;
-}
-#about-img {
-    display: block;
+#quote-container {
     width: 100%;
+    justify-content: center;
+    display: flex;
+}
+#quote-content {
+    background: linear-gradient(120deg, #7109b7ab 10%, #4ccaf091 100%);
+    border-radius: 10px;
+    width: 60%;
+}
+#quote-content h1 {
+    color: var(--white);
     text-align: center;
-}
-#about-content {
-    margin: 3rem;
-    display: block;
-}
-#about-content p {
-    color: var(--gray);
-    font-size: var(--font-size-normaltext);
-    margin-top: 1rem;
-}
-#about-content h1 {
-    color: var(--bright-blue-1);
     font-size: var(--font-size-largetext);
-    text-align: center;
-    margin-top: 3rem;
+}
+#quote-content h2 {
+    color: var(--white);
+    font-size: var(--font-size-smalltext);
+    display: inline-block;
+    margin-left: 65%;
 }
 
 
@@ -858,9 +861,6 @@ main {
     #sponsor-display > div {font-size: 1rem}
 
     .sponsor-promo-container h1 {font-size: 2rem}
-    #about-container h1 {font-size: 3.2rem}
-    #about-content p {font-size: 1.2rem}
-    #about-content h1 {font-size: 2rem}
 
     #sponsor-links p {font-size: 1.2rem}
 }
