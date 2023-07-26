@@ -3,9 +3,9 @@
 // Typing effect "Next Generation"
 
 var char = 0;
-var text = 'Innovators';
-var speed = 100;
-var type = document.getElementById("type-effect");
+const text = 'Innovators';
+const speed = 100;
+const type = document.getElementById("type-effect");
 
 function typeEffect() {
     if (char < text.length) {
