@@ -624,12 +624,14 @@ h1 > .gradient {
     margin-top: 3rem;
     width: 80%;
     margin-left: 10%;
+    padding: 1rem;
 }
 #sponsor-links {
     text-align: center;
     background-color: var(--dark-blue-accent);
     padding: 1rem;
     border-radius: 20px;
+    box-shadow: -10px 10px 0px var(--bright-blue-3)
 }
 #sponsor-links p {
     color: var(--gray);
@@ -710,19 +712,23 @@ h1 > .gradient {
     display: inline-block;
     margin: 1rem;
     color: var(--white);
-    background-color: var(--dark-blue-accent);
+    background-color: var(--white);
     padding: 1.5rem;
-    border-radius: 15px;
-    max-width: 320px;
-    max-height: 200px;
+    border-radius: 20px;
+    width: 270px;
+    height: 150px;
     overflow: hidden;
     vertical-align: middle;
+    position: relative;
+    box-shadow: -10px 10px 0px var(--bright-blue-3)
 }
-.sponsor h1 {font-size: 1.8rem}
 .sponsor img {
-    width: 300px;
-    height: auto;
-    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 270px;
+    max-height: 150px;
     border-radius: 5px;
 }
 
@@ -1000,16 +1006,17 @@ h1 > .gradient {
     #contact-text > p {font-size: 1.2rem}
     #sponsor-info h1 {font-size: 3rem}
     #sponsor-info p {font-size: 1.5rem}
+    #sponsor-display {width: 90%; margin-left: 5%}
     #sponsor-display > div > h1 {font-size: 2.5rem}
     #sponsor-buttons a {font-size: 1.5rem}
 
-    .tiers > div {width: 300px; font-size: 1rem}
+    .tiers > article {width: 300px; font-size: 1rem}
     .tiers ul {width: 280px; margin-left: 10px}
     .tiers-wrapper > h2 {display: none}
 
-    .sponsor img {max-width: 180px}
-    .sponsor h1 {font-size: 1rem}
-    #sponsor-display > div {font-size: 1rem}
+    .sponsor {width: 216px; height: 120px}
+    .sponsor img {max-width: 216px; max-height: 120px}
+    #sponsor-display > article {font-size: 1rem}
     .sponsor-promo-container h1 {font-size: 2rem}
     #sponsor-links p {font-size: 1.2rem}
 
