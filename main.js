@@ -34,7 +34,7 @@ function toggleElement(el) {
 //         document.documentElement.style.setProperty('--easy-black', 'whitesmoke');
 //         document.documentElement.style.setProperty('--background-gradient', 'rgb(240, 240, 240)');
 //         header.style.backgroundColor = "#edf2fa";
-//         header.style.boxShadow = "1px 2px 3px lightgray";
+        // header.style.boxShadow = "1px 2px 3px lightgray";
 //         document.getElementById("logo").src = "Graphics/SparkansLogoBlackSmall.png";
 //         document.documentElement.style.setProperty('--white', 'hsl(210,8%,25%)');
 //         document.documentElement.style.setProperty('--dark-gray', '#e9e9e9'); //change

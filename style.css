@@ -51,6 +51,10 @@
     overflow-x: hidden;
 }
 
+body {
+    background-color: var(--easy-black);
+}
+
 video {
     position: absolute;
     z-index: -1;
@@ -60,7 +64,7 @@ video {
     object-fit: cover;
 }
 
-body {
+#body-bg-gradient {
     height: 100%;
     background: linear-gradient(176deg, var(--easy-black) 40%, var(--background-gradient) 100%);
     cursor: default;
@@ -97,7 +101,7 @@ header {
     padding-left: 3rem;
     padding-right: 3rem;
     z-index: 100;
-    background: linear-gradient(180deg, var(--easy-black) 20%, rgb(0, 0, 0, 0) 100%);
+    background: linear-gradient(180deg, var(--easy-black) 20%, transparent 100%);
 }
 header a {
     color: var(--bright-blue-1);
@@ -115,8 +119,8 @@ header a:hover {
 footer {
     display: block;
     padding: 1.2rem;
-    margin-top: 5rem;
-    margin-bottom: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
 }
 footer > section {
     display: block;
@@ -190,12 +194,12 @@ nav a:hover {
     display: none;
     top: 83px;
     left: 0;
-    background-color: var(--dark-blue-accent);
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 10px 5rem 10px 2rem;
 }
 
 .mobile-menu a{
-    color:#00AED7;
+    color: var(--bright-blue-1);
     text-decoration: none;
 }
 .mobile-menu a:hover {
@@ -298,7 +302,7 @@ h1 > .gradient {
     white-space: nowrap;
 }
 
-main {
+#landing-page {
     position: absolute;
     top: 100%;
     width: 100%;
@@ -384,39 +388,39 @@ main {
     width: 100%;
     height: 20vw;
     min-height: 250px;
-    opacity: 90%;
+    opacity: 85%;
     position: absolute;
     z-index: 1;
 }
 .content-block-text {
-    display: inline-block;
-    z-index: 2;
     position: absolute;
+    z-index: 2;
     color: white;
-    width: 35%;
-    margin-left: 10%;
     margin-top: 2rem;
+    margin-left: 3rem;
+    width: 35%;
+    min-width: 370px;
 }
-.text-reversed {
-    margin-left: 60%;
+#text-reversed {
+    right: 0px;
+    margin-right: 3rem;
 }
+
 .gradient-reversed {
     background: linear-gradient(270deg, var(--easy-black) 30%, rgb(0, 0, 0, 0) 100%);
 }
 .content-block-text h1 {
-    justify-content: center;
     font-size: var(--font-size-largetext);
-    width: 100%;
 }
 .content-block-text p {
     word-wrap: break-word;
+    font-size: 1.3rem;
 }
 .content-block img {
     width: 100%;
     height: 20vw;
     min-height: 250px;
     object-fit: cover;
-    opacity: 60%;
 }
 
 
@@ -433,7 +437,7 @@ main {
     text-align: center;
     font-size: var(--font-size-largetext);
     width: 84%;
-    margin-top: 18rem;
+    margin-top: 12rem;
     margin-bottom: 4rem;
     border-bottom: 2px solid var(--white);
     padding-bottom: 1vh;
@@ -494,7 +498,7 @@ main {
 /* Sponsor button/promo */
 .sponsor-promo-wrapper {
     display: block;
-    background: linear-gradient(150deg, rgb(0, 0, 0, 0)20%, rgb(20, 53, 75) 100%);
+    background: linear-gradient(160deg, transparent 30%, rgba(20, 53, 75, 0.842) 100%);
     margin-top: 5rem;
 }
 .sponsor-promo-container {
@@ -618,13 +622,15 @@ main {
 #sponsor-links-wrapper {
     margin-top: 3rem;
     width: 80%;
-    margin-left: 10%;
+    margin-left: calc(10% - 1rem);
+    padding: 1rem;
 }
 #sponsor-links {
     text-align: center;
     background-color: var(--dark-blue-accent);
     padding: 1rem;
     border-radius: 20px;
+    box-shadow: -10px 10px 0px var(--bright-blue-3)
 }
 #sponsor-links p {
     color: var(--gray);
@@ -705,19 +711,23 @@ main {
     display: inline-block;
     margin: 1rem;
     color: var(--white);
-    background-color: var(--dark-blue-accent);
+    background-color: var(--white);
     padding: 1.5rem;
-    border-radius: 15px;
-    max-width: 320px;
-    max-height: 200px;
+    border-radius: 20px;
+    width: 270px;
+    height: 150px;
     overflow: hidden;
     vertical-align: middle;
+    position: relative;
+    box-shadow: -10px 10px 0px var(--bright-blue-3)
 }
-.sponsor h1 {font-size: 1.8rem}
 .sponsor img {
-    width: 300px;
-    height: auto;
-    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 270px;
+    max-height: 150px;
     border-radius: 5px;
 }
 
@@ -800,30 +810,159 @@ main {
 
 /* _____ ABOUT PAGE _____ */
 
-/* About content */
+.item-divider {
+    display: block;
+    width: 80%;
+    border-top: 1px solid var(--gray);
+    text-align: center;
+    margin-left: 10% !important;
+    margin-bottom: 5rem;
+}
+
+/* Main quote */
 #quote-container {
     width: 100%;
-    justify-content: center;
     display: flex;
+    justify-content: center;
+    height: 100%;
+    margin: 3rem 0 3rem 0;
 }
 #quote-content {
-    background: linear-gradient(120deg, #7109b7ab 10%, #4ccaf091 100%);
-    border-radius: 10px;
-    width: 60%;
+    padding: 1rem;
+    width: 75%;
 }
 #quote-content h1 {
-    color: var(--white);
     text-align: center;
-    font-size: var(--font-size-largetext);
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #52b69a, #4895ef);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: wrap;
+    margin: 1rem 0 1rem 0;
 }
 #quote-content h2 {
     color: var(--white);
+    opacity: 50%;
     font-size: var(--font-size-smalltext);
     display: inline-block;
-    margin-left: 65%;
+    margin-left: 70%;
 }
 
+/* Content banners */
 
+#about-banners-container {
+    display: block;
+    margin-top: 5rem;
+}
+#about-banners {
+    text-align: center;
+    padding-bottom: 7rem;
+}
+.banner {
+    width: 400px;
+    height: 800px;
+    margin: 1rem;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    transition: 0.2s;
+    opacity: 80%;
+}
+.banner:hover {
+    transform: scale(102%);
+    opacity: 100%;
+}
+.banner:hover > .banner-text h2 {opacity: 100%}
+.banner-text {
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    color: var(--white);
+}
+.banner-text > * {position: absolute}
+
+.banner-text h1 {
+    top: 60%;
+    font-size: var(--font-size-normaltext);
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.banner-text p {
+    text-align: left;
+    top: 67%;
+    font-size: var(--font-size-smalltext);
+    left: 10%;
+    width: 80%;
+}
+.banner-text h2 {
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    color: var(--bright-blue-3);
+    opacity: 0%;
+    transition: 0.2s;
+}
+.banner img {
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+.banner-fade {
+    width: 400px;
+    height: 800px;
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(180deg, transparent 20%, rgba(0, 0, 0, 1) 100%);
+    top: 0;
+    left: 0;
+}
+
+/* Cascading content */
+#cascade-items {
+    text-align: center;
+    padding-top: 5rem;
+}
+.cascade-element {
+    background-color: var(--easy-black);
+    display: inline-block;
+    position: relative;
+    border-radius: 30px;
+    height: 90%;
+    width: 90%;
+    margin-bottom: 5rem;
+    transition: 0.2s;
+    border: 1px solid var(--gray);
+}
+.cascade-fade {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 1%, transparent 50%);
+    height: 120vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.cascade-img {
+    height: 120vh;
+    width: 100%;
+    object-fit: cover;
+    opacity: 75%;
+    transition: 0.2s;
+}
+.cascade-element:hover > .cascade-img {opacity: 85%}
+.cascade-text {
+    position: absolute;
+    text-align: left;
+    bottom: 0;
+    height: 30vh;
+    width: 90%;
+    margin-left: calc(5% - 1rem);
+    color: var(--white);
+}
+.cascade-text h1 {font-size: var(--font-size-largetext)}
+.cascade-text p {font-size: var(--font-size-smalltext)}
 
 /* _____ ALL MEDIA QUERIES _____ */
 @media only screen and (max-width: 1000px) {  /* IPAD */
@@ -834,14 +973,30 @@ main {
     #button-learnmore svg {width: 15px}
     #promotional-container {display: none}
 
+    .content-block-text {min-width: 215px}
+    .content-block-text h1 {font-size: var(--font-size-normaltext)}
+    .content-block-text p {font-size: var(--font-size-xsmalltext)}
+
     .sponsor-promo-container h1 {font-size: 3rem}
     .sponsor-promo-container svg {width: 40px}
+
+    #quote-content h1 {font-size: 1.5rem}
+    #quote-content h2 {font-size: 0.8rem}
+    .cascade-fade {display: none}
+    .cascade-img {height: 100vh}
+    .cascade-text {height: auto; backdrop-filter: blur(5px); background-color: rgba(0, 0, 0, 0.2); top: 10%; bottom: initial; border-radius: 10px; padding: 1rem; width: 80%; margin-left: calc(10% - 1rem)}
 }
 
 @media only screen and (max-width: 640px) { /* IPHONE */
-    nav{display: none} 
+    nav {display: none} 
     #mobile-menu-icon {display: flex}
     #front-text {font-size: 4.4rem}
+
+    #text-reversed {right: initial}
+    .fade-gradient {display: none}
+    .content-block-text {margin: 2rem 0 0 calc(10% - 1rem); max-width: 80%; width: 80%; backdrop-filter: blur(5px); background-color: rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 1rem; min-width: 0px !important;}
+    .sponsor-promo-container a {font-size: var(--font-size-normaltext)}
+    .sponsor-promo-container svg {width: 30px}
 
     #sponsor-text > h1 {font-size: 4rem}
     #sponsor-text > p {font-size: 1.2rem}
@@ -849,27 +1004,33 @@ main {
     #contact-text > p {font-size: 1.2rem}
     #sponsor-info h1 {font-size: 3rem}
     #sponsor-info p {font-size: 1.5rem}
+    #sponsor-display {width: 90%; margin-left: 5%}
     #sponsor-display > div > h1 {font-size: 2.5rem}
     #sponsor-buttons a {font-size: 1.5rem}
 
-    .tiers > div {width: 300px; font-size: 1rem}
+    .tiers > article {width: 300px; font-size: 1rem}
     .tiers ul {width: 280px; margin-left: 10px}
     .tiers-wrapper > h2 {display: none}
 
-    .sponsor img {max-width: 180px}
-    .sponsor h1 {font-size: 1rem}
-    #sponsor-display > div {font-size: 1rem}
-
+    .sponsor {width: 216px; height: 120px}
+    .sponsor img {max-width: 216px; max-height: 120px}
+    #sponsor-display > article {font-size: 1rem}
     .sponsor-promo-container h1 {font-size: 2rem}
-
     #sponsor-links p {font-size: 1.2rem}
+
+    #quote-content h1 {font-size: 1.2rem}
+    #about-banners-container {display: none}
+    .cascade-img {height: 80vh}
+    .cascade-text h1 {font-size: var(--font-size-normaltext)}
+    .cascade-text p {font-size: var(--font-size-xsmalltext)}
 }
+
+
 @media only screen and (min-width: 640px) { 
     .open .mobile-menu {
         display: none;
     }
 }
-
 @media only screen and (max-width: 320px) {
     * {overflow-x: show;}
     #logo-container p {display: none}
