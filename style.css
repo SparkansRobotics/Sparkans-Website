@@ -196,6 +196,7 @@ nav a:hover {
     left: 0;
     background-color: rgba(255, 255, 255, 0.1);
     padding: 10px 5rem 10px 2rem;
+    backdrop-filter: blur(10px);
 }
 
 .mobile-menu a{
@@ -994,7 +995,7 @@ h1 > .gradient {
 
     #text-reversed {right: initial}
     .fade-gradient {display: none}
-    .content-block-text {margin: 2rem 0 0 calc(10% - 1rem); max-width: 80%; width: 80%; backdrop-filter: blur(5px); background-color: rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 1rem; min-width: 0px !important;}
+    .content-block-text {margin: 2rem 0 0 calc(10% - 1rem); max-width: 80%; width: 80%; backdrop-filter: blur(5px); background-color: rgba(0, 0, 0, 0.3); border-radius: 10px; padding: 1rem; min-width: 0px !important;}
     .sponsor-promo-container a {font-size: var(--font-size-normaltext)}
     .sponsor-promo-container svg {width: 30px}
 
