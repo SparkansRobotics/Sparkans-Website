@@ -59,7 +59,6 @@ video {
     position: absolute;
     z-index: -1;
     opacity: 80%;
-    min-height: 300px;
     height: 100%;
     min-width: 100%;
     object-fit: cover;
@@ -125,8 +124,8 @@ footer {
 }
 footer > section {
     display: block;
-    width: 80%;
-    margin-left: 10%;
+    width: 90%;
+    margin-left: 5%;
     color: grey;
     font-size: var(--font-size-xsmalltext);
     text-align: center;
@@ -145,13 +144,36 @@ footer > section > div {
     text-align: center;
     margin-left: 25% !important;
 }
+#pre-footer {
+    text-align: center;
+    width: 100%;
+}
+#pre-footer > .map-el {
+    display: inline-block;
+    margin: 50px 20px 50px 20px;
+}
+.map-el > ul {
+    color: var(--gray);
+    font-size: 1.5rem;
+    text-align: left;
+}
+#google-map {
+    border-radius: 5px;
+    height: 300px;
+    width: 400px;
+}
+#map-content {
+    height: 300px;
+    width: 400px;
+}
 
 /* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 20rem;
+    width: calc(20rem + 1vw);
+    padding: 8px;
 }
 
 nav a {
@@ -165,6 +187,17 @@ nav a:hover {
     transform: translateY(-1px);
     color: #fff;
     transition: 0.2s;
+}
+#sponsor-us {
+    background-color: #ffde17;
+    color: var(--easy-black);
+    border-bottom: none !important;
+    border-radius: 20px;
+    padding: 10px;
+}
+#sponsor-us:hover {
+    transform: scale(105%);
+    background-color: #ffe817;
 }
 
 /* (Mobile) menu dropdown */
@@ -228,19 +261,27 @@ nav a:hover {
 
 @keyframes appear {
     0% {
-        transform: translateY(100%);
+        transform: translateY(50%);
         opacity: 0%;
     } 100% {
         transform: translateY(0%);
         opacity: 100%;
     }
 }
+@keyframes fadeIn {
+    from {
+        opacity: 0%;
+    } to {
+        opacity: 100%;
+    }
+}
 
 /* Video player for background */
 #video-container {
-    position:absolute;
-    height:100%;
-    width:100%;
+    position: absolute;
+    height: 100%;
+    min-height: 600px;
+    width: 100%;
     overflow: hidden;
     z-index: -1;
 }
@@ -251,6 +292,7 @@ nav a:hover {
     z-index: -1;
     width: 100%;
     height: 100%;
+    min-height: 600px;
 }
 
 /* Double down chevrons */
@@ -262,19 +304,29 @@ nav a:hover {
     fill: var(--bright-blue-3);
     position: absolute;
     bottom: 2rem;
+    opacity: 0%;
+    animation: fadeIn 0.5s linear 1s 1 forwards;
 }
 
 /* Hero "Sparkans" text */
 
+#front-text-container {
+    position: absolute;
+    height: 100%;
+    min-height: 600px;
+    width: 100%;
+    top: 0;
+    z-index: -1;
+}
 #front-text {
     display: block;
-    position: absolute;
+    position: relative;
     width: 100%;
     top: calc(50% - var(--font-size-hero) / 2);
     margin-bottom: 20vh;
     text-align: center;
     font-size: var(--font-size-hero);
-    animation: appear 1.2s cubic-bezier(.06,.62,.58,1) 0.2s 1 forwards;
+    animation: appear 0.8s cubic-bezier(.06,.62,.58,1) 0.2s 1 forwards;
     overflow: hidden;
     opacity: 0%;
     transform: translateY(100%);
@@ -290,8 +342,6 @@ nav a:hover {
     width: 100%;
     font-size: var(--font-size-largetext);
 }
-#front-text > span > span::before {content: "• "}
-#front-text > span > span::after {content: " •"}
 h1 > .gradient {
     background: linear-gradient(
         to right,
@@ -306,7 +356,7 @@ h1 > .gradient {
 
 #landing-page {
     position: absolute;
-    top: 100%;
+    top: max(600px, 100%);
     width: 100%;
 }
 
@@ -527,7 +577,6 @@ h1 > .gradient {
 }
 
 
-
 /* _____ SPONSOR PAGE _____ */
 
 /* Sponsor information text */
@@ -628,15 +677,20 @@ h1 > .gradient {
     padding: 1rem;
 }
 #sponsor-links {
-    text-align: center;
+    text-align: left;
     background-color: var(--dark-blue-accent);
     padding: 1rem;
     border-radius: 20px;
-    box-shadow: -10px 10px 0px var(--bright-blue-3)
+    box-shadow: -10px 10px 0px var(--white)
 }
 #sponsor-links p {
     color: var(--gray);
-    font-size: 2rem;
+    font-size: var(--font-size-normaltext);
+}
+#sponsor-links ul {
+    color: var(--gray);
+    font-size: var(--font-size-normaltext);
+    margin-left: 20px;
 }
 
 /* Sponsor buttons */
@@ -648,18 +702,36 @@ h1 > .gradient {
     overflow: hidden;
 }
 #sponsor-buttons {
-    height: 10rem;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    display: inline-block;
+    padding: 1rem;
 }
 #sponsor-buttons a {
+    width: 350px;
+    height: 250px;
+    display: inline-block;
     padding: 1rem;
+    margin: 0px 20px 0px 20px;
     border-radius: 15px;
-    border-left: 5px solid var(--white);
-    border-right: 5px solid var(--white);
-    background-color: var(--dark-gray);
-    font-size: 3rem;
+    background-color: var(--dark-blue-accent);
+    font-size: 2.2rem;
+    box-shadow: -10px 10px 0px var(--bright-blue-3);
+}
+#sponsor-buttons a > div {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin: 15px 0px 30px 0px;
+}
+#sponsor-buttons a > div > img {
+    max-height: 150px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    fill: var(--white);
+}
+#sponsor-buttons a:hover {
+    transform: translate(-10px, 10px);
+    box-shadow: none;
 }
 
 /* Sponsor information */
@@ -721,7 +793,12 @@ h1 > .gradient {
     overflow: hidden;
     vertical-align: middle;
     position: relative;
-    box-shadow: -10px 10px 0px var(--bright-blue-3)
+    box-shadow: -10px 10px 0px var(--bright-blue-3);
+    transition: 0.2s;
+}
+.sponsor:hover {
+    transform: translate(-10px, 10px);
+    box-shadow: none;
 }
 .sponsor img {
     position: absolute;
@@ -987,6 +1064,8 @@ h1 > .gradient {
     .cascade-fade {display: none}
     .cascade-img {height: 100vh}
     .cascade-text {height: auto; backdrop-filter: blur(5px); background-color: rgba(0, 0, 0, 0.2); top: 10%; bottom: initial; border-radius: 10px; padding: 1rem; width: 80%; margin-left: calc(10% - 1rem)}
+
+    #pre-footer > .map-el {margin: 20px}
 }
 
 @media only screen and (max-width: 640px) { /* IPHONE */
@@ -1019,12 +1098,17 @@ h1 > .gradient {
     #sponsor-display > article {font-size: 1rem}
     .sponsor-promo-container h1 {font-size: 2rem}
     #sponsor-links p {font-size: 1.2rem}
+    #sponsor-links ul {font-size: 1.2rem}
 
     #quote-content h1 {font-size: 1.2rem}
     #about-banners-container {display: none}
     .cascade-img {height: 80vh}
     .cascade-text h1 {font-size: var(--font-size-normaltext)}
     .cascade-text p {font-size: var(--font-size-xsmalltext)}
+
+    #pre-footer > .map-el {margin: 20px 0px 20px 0px; width: 65vw; min-width: 200px; height: 300px}
+    .map-el > ul {font-size: 1rem}
+    #map-content {height: fit-content !important}
 }
 
 
