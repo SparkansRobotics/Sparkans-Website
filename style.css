@@ -40,7 +40,7 @@
     from {
         height: 0px;
     } to {
-        height: 120px;
+        height: 170px;
     }
 }
 
@@ -214,7 +214,7 @@ nav a:hover {
 }
 
 .open .mobile-menu{
-    display: block;
+    display: inline-block;
     position: absolute;
     animation: dropDown 0.15s linear forwards;
     flex-direction: column;
@@ -245,7 +245,9 @@ nav a:hover {
 .mobile-menu li {
     margin-bottom: 10px;
 }
-
+.mobile-sponsor-us {
+    line-height: 50px;
+}
 
 /* Sparkans logo styles */
 #logo-container {
