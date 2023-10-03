@@ -172,7 +172,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: calc(20rem + 1vw);
+    width: calc(24rem + 1vw);
     padding: 8px;
 }
 

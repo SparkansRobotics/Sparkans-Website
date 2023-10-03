@@ -7,28 +7,23 @@
       }
 
       .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke: #fff;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-3, .cls-4, .cls-5, .cls-6 {
         stroke-miterlimit: 10;
       }
 
-      .cls-1, .cls-2, .cls-7, .cls-4, .cls-5, .cls-6 {
-        stroke: #00aeef;
-      }
-
-      .cls-1, .cls-2, .cls-7, .cls-6 {
-        fill: #00aeef;
-      }
-
-      .cls-2, .cls-3 {
+      .cls-2 {
+        stroke-miterlimit: 10;
         stroke-width: 1.18px;
       }
 
       .cls-3 {
-        fill: #ffde17;
-        stroke: #ffde17;
-      }
-
-      .cls-7 {
-        stroke-miterlimit: 10;
         stroke-width: 1.18px;
       }
 
@@ -49,10 +44,10 @@
       }
     </style>
   </defs>
-  <path class="cls-2" d="m181.62,292.82l55.3,7.3,35.2,59.9c4.3,6.8,11.8,11,19.9,11l91.4-.7-.3,17.7-3.8,10.6-124.7-1.1-20.6-31.5-37.3-2.4-60.9-40.1h0c24.4-2.8,38.5-15.7,45.5-30.8l.3.1Z"/>
+  <path class="cls-3" d="m181.62,292.82l55.3,7.3,35.2,59.9c4.3,6.8,11.8,11,19.9,11l91.4-.7-.3,17.7-3.8,10.6-124.7-1.1-20.6-31.5-37.3-2.4-60.9-40.1h0c24.4-2.8,38.5-15.7,45.5-30.8l.3.1Z"/>
   <g>
     <circle class="cls-4" cx="130.02" cy="266.52" r="48.7"/>
-    <circle class="cls-7" cx="129.95" cy="266.51" r="39.8" transform="translate(-145.11 377.22) rotate(-85.93)"/>
+    <circle class="cls-2" cx="129.95" cy="266.51" r="39.8" transform="translate(-145.11 377.22) rotate(-85.93)"/>
     <g>
       <line class="cls-5" x1="129.92" y1="221.22" x2="129.92" y2="311.82"/>
       <line class="cls-5" x1="98.32" y1="234.12" x2="161.62" y2="298.92"/>
