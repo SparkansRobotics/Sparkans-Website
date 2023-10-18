@@ -631,6 +631,10 @@ h1 > .gradient {
     border-color: rgb(36, 157, 238);
     background: linear-gradient(160deg, var(--dark-gray) 60%, rgb(20, 53, 75) 100%);
 }
+#titanium {
+    border-color: rgb(165, 169, 180);
+    background: linear-gradient(160deg, var(--dark-gray) 60%, rgb(108, 110, 122) 100%);
+}
 #platinum {
     border-color: rgb(241, 241, 241);
     background: linear-gradient(160deg, var(--dark-gray) 60%, rgb(63, 63, 63) 100%);
@@ -641,6 +645,7 @@ h1 > .gradient {
 }
 
 #diamond h2 {color: rgb(36, 157, 238)}
+#titanium h2 {color: rgb(165, 169, 180)}
 #platinum h2 {color: rgb(241, 241, 241)}
 #gold h2 {color: rgb(255, 204, 0)}
 
