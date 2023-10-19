@@ -605,6 +605,10 @@ h1 > .gradient {
     margin-top: 5vh;
 }
 .tiers {
+    display: inline-grid;
+    grid-template-columns: 50% 50%;
+    grid-row: auto auto;
+    grid-row-gap: 20px;
     height: 100%;
     overflow: hidden;
 }
@@ -619,7 +623,7 @@ h1 > .gradient {
     margin: 1vw;
     margin-bottom: 2vh;
     width: 380px;
-    height: 500px;
+    height: 600px;
     vertical-align: top;
     color: var(--white);
     border-top-width: 6px;
@@ -633,7 +637,7 @@ h1 > .gradient {
 }
 #titanium {
     border-color: rgb(165, 169, 180);
-    background: linear-gradient(160deg, var(--dark-gray) 60%, rgb(108, 110, 122) 100%);
+    background: linear-gradient(160deg, var(--dark-gray) 60%, rgb(59, 68, 109) 100%);
 }
 #platinum {
     border-color: rgb(241, 241, 241);
@@ -784,6 +788,7 @@ h1 > .gradient {
     margin-bottom: 1rem;
 }
 #display-diamond > h1 {color: rgb(36, 157, 238) !important}
+#display-titanium > h1 {color: rgb(165, 169, 180) !important}
 #display-platinum > h1 {color: rgb(241, 241, 241) !important}
 #display-gold > h1 {color: rgb(255, 204, 0) !important}
 
