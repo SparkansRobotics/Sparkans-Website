@@ -605,6 +605,7 @@ h1 > .gradient {
     margin-top: 5vh;
 }
 .tiers {
+    display: block;
     height: 100%;
     overflow: hidden;
 }
