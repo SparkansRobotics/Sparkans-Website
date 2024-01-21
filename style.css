@@ -412,6 +412,11 @@ h1 > .gradient {
     color: var(--white);
     text-decoration: none;
     font-size: var(--font-size-normaltext);
+    display: flex;
+    align-items: center;
+}
+#button-learnmore a > * {
+    display: inline-block;
 }
 #button-learnmore svg {
     width: 25px;
@@ -419,8 +424,9 @@ h1 > .gradient {
     fill: var(--white);
     margin-left: 1rem;
     transition: 0.2s;
+    margin-right: 10px;
 }
-#button-learnmore a:hover + svg {
+#button-learnmore a:hover > svg {
     transform: translateX(10px);
 }
 
@@ -557,7 +563,6 @@ h1 > .gradient {
 }
 .sponsor-promo-container {
     display: flex;
-    width: 100%;
     justify-content: center;
     padding: 20px;
     align-items: center;
@@ -566,6 +571,14 @@ h1 > .gradient {
     font-size: var(--font-size-largetext);
     color: var(--white);
     text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.sponsor-promo-container a > * {
+    display: inline-block;
+}
+.sponsor-promo-container a > p {
+    margin-left: 50px;
 }
 .sponsor-promo-container svg {
     width: 50px;
@@ -573,8 +586,9 @@ h1 > .gradient {
     fill: var(--white);
     transition: 0.2s;
     margin-left: 2rem;
+    margin-right: 50px;
 }
-.sponsor-promo-container:hover > svg{
+.sponsor-promo-container:hover a > svg{
     transform: translateX(2rem);
 }
 
@@ -1108,6 +1122,9 @@ h1 > .gradient {
     .sponsor-promo-container h1 {font-size: 2rem}
     #sponsor-links p {font-size: 1.2rem}
     #sponsor-links ul {font-size: 1.2rem}
+    .sponsor-promo-container a > p {margin-left: 20px}
+    .sponsor-promo-container svg {margin-right: 20px}
+    .sponsor-promo-container:hover a > svg {transform: translateX(1rem)}
 
     #quote-content h1 {font-size: 1.2rem}
     #about-banners-container {display: none}
