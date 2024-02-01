@@ -249,6 +249,19 @@ nav a:hover {
     line-height: 50px;
 }
 
+
+.news-banner {
+    width: 100%;
+    border-top: 2px solid var(--white);
+    border-bottom: 2px solid var(--white);
+    height: 60px;
+    text-align: center;
+}
+.news-banner > * {
+    margin-top: 20px;
+    color: var(--white);
+}
+
 /* Sparkans logo styles */
 #logo-container {
     display: flex;
