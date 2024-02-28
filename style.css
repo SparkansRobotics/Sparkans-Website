@@ -172,7 +172,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: calc(24rem + 1vw);
+    width: calc(28rem + 1vw);
     padding: 8px;
 }
 
@@ -1079,7 +1079,146 @@ h1 > .gradient {
 .cascade-text h1 {font-size: var(--font-size-largetext)}
 .cascade-text p {font-size: var(--font-size-smalltext)}
 
+
+
+/* OUTREACH PAGE */
+
+#outreach-banner-container {
+    width: 800px;
+    height: 600px;
+    position: relative;
+    margin: auto;
+}
+.outreach-banner-item {
+    width: 37.5%;
+    position: absolute;
+    border-radius: 20px;
+    background-size: cover;
+}
+.outreach-banner-item:nth-child(1) {
+    left: 6.25%;
+    height: 75%;
+    top: 12.5%;
+    background-image: url(https://cdn.discordapp.com/attachments/1129458659907350588/1208175407459868682/4F3CDFCA-C2E0-415D-A097-55F76308EB0A.jpg?ex=65e25407&is=65cfdf07&hm=615788f3e2be83df7e376939a54b68be31353743bd8662bbf7b3e71d31686da0&);
+}
+.outreach-banner-item:nth-child(3) {
+    left: 31.25%;
+    height: 83.3333333%;
+    top: 8.33333333%;
+    background-image: url(https://cdn.discordapp.com/attachments/1129458659907350588/1208175407459868682/4F3CDFCA-C2E0-415D-A097-55F76308EB0A.jpg?ex=65e25407&is=65cfdf07&hm=615788f3e2be83df7e376939a54b68be31353743bd8662bbf7b3e71d31686da0&);
+}
+.outreach-banner-item:nth-child(2) {
+    left: 56.25%;
+    height: 75%;
+    top: 12.5%;
+    background-image: url(https://cdn.discordapp.com/attachments/1129458659907350588/1208175407459868682/4F3CDFCA-C2E0-415D-A097-55F76308EB0A.jpg?ex=65e25407&is=65cfdf07&hm=615788f3e2be83df7e376939a54b68be31353743bd8662bbf7b3e71d31686da0&);
+}
+.outreach-banner-title {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    color: white;
+}
+
+
+#outreach-promo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.outreach-promo-item {
+    width: 500px;
+    height: 300px;
+    color: white;
+}
+.outreach-promo-item > h1 {
+    font-size: 5rem;
+    color: transparent;
+    background-image: url("Graphics/outreach.jpg");
+    background-size: cover;
+    -webkit-background-clip: text;
+}
+.outreach-promo-item > p {
+    margin: 20px 0 0 50px;
+}
+
+
+#outreach-blog-container {
+    display: inline-block;
+    margin-top: 100px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.outreach-blog-item {
+    background-color: var(--white);
+    width: 1000px;
+    height: 200px;
+    display: block;
+    position: relative;
+    margin: 10px;
+    border-radius: 20px;
+}
+.outreach-blog-item > * {
+    position: absolute;
+}
+.outreach-blog-item > img {
+    width: 300px;
+    object-fit: cover;
+    top: 15px;
+    height: 170px;
+    left: 15px;
+    border-radius: 15px;
+}
+.outreach-blog-item > h1 {
+    top: 22px;
+    left: 345px;
+}
+.outreach-blog-item > p {
+    left: 345px;
+    width: 620px;
+    top: 55px;
+}
+.outreach-blog-item > div {
+    background-color: rgb(24, 24, 24);
+    width: 120px;
+    height: 40px;
+    top: 135px;
+    left: 25px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 80%;
+}
+
+
+
+
 /* _____ ALL MEDIA QUERIES _____ */
+@media only screen and (max-width: 1050px) {
+    #outreach-banner-container {
+        /* transform: scale(75%); */
+        width: 600px;
+        height: 450px;
+    }
+    #outreach-promo-container {
+        flex-wrap: wrap;
+    }
+    .outreach-promo-item > p {
+        margin-left: 0;
+    }
+    .outreach-blog-item {
+        width: 600px;
+        height: 400px;
+    }
+}
+
+
+
+
 @media only screen and (max-width: 1000px) {  /* IPAD */
     #front-text {font-size: 7.5rem}
     .highlight {font-size: 3rem; border-bottom: 5px solid var(--white)}
@@ -1105,8 +1244,6 @@ h1 > .gradient {
 }
 
 @media only screen and (max-width: 640px) { /* IPHONE */
-    nav {display: none} 
-    #mobile-menu-icon {display: flex}
     #front-text {font-size: 4.4rem}
 
     #text-reversed {right: initial}
@@ -1149,9 +1286,12 @@ h1 > .gradient {
     .map-el > ul {font-size: 1rem}
     #map-content {height: fit-content !important}
 }
+@media only screen and (max-width: 750px) {
+    nav {display: none} 
+    #mobile-menu-icon {display: flex}
+}
 
-
-@media only screen and (min-width: 640px) { 
+@media only screen and (min-width: 750px) { 
     .open .mobile-menu {
         display: none;
     }
