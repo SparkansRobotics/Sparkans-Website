@@ -511,7 +511,6 @@ h1 > .gradient {
     font-size: var(--font-size-largetext);
     width: 84%;
     margin-top: 12rem;
-    margin-bottom: 4rem;
     border-bottom: 2px solid var(--white);
     padding-bottom: 1vh;
 }
@@ -606,14 +605,13 @@ h1 > .gradient {
 }
 
 .award {
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(25px);
     padding: 3rem;
     position: absolute;
-    bottom: 10px;
-    width: 90%;
+    bottom: 0;
+    width: calc(100% - 6rem);
     transform: translateX(-50%);
     left: 50%;
-    border-radius: 8px;
     text-shadow: 0 0 3px black;
 }
 
