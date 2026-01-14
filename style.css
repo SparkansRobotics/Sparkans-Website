@@ -401,6 +401,75 @@ h1 > .gradient {
     content: "|";
     animation: blink 1.1s linear 1.5s infinite forwards;
 }
+
+/* Teams */
+.teams-container {
+    color: white;
+}
+
+.team {
+    position: relative;
+    padding: 8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: rgb(42, 123, 155);
+    background: linear-gradient(90deg, rgba(237, 221, 83, 0) 0%, rgba(42, 123, 155, 1) 100%);
+    overflow: hidden;
+}
+
+.team.reversed {
+    flex-direction: row-reverse;
+    background: rgb(137, 107, 182);
+    background: linear-gradient(90deg, rgb(137, 107, 182) 0%, rgba(237, 221, 83, 0) 100%);
+}
+
+.team .team-photo {
+    position: absolute;
+    width: 50%;
+    right: 0;
+    border-top-left-radius: 100rem;
+    border-bottom-left-radius: 100rem;
+}
+
+.team .team-logo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.team.reversed .team-logo {
+    transform: scale(-1, 1);
+}
+
+.team.reversed .team-photo {
+    left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    border-top-right-radius: 100rem;
+    border-bottom-right-radius: 100rem;
+}
+
+.team .text {
+    width: 40%;
+    z-index: 10;
+    margin-left: 150px;
+}
+
+.team.reversed .text {
+    margin-right: 100px;
+}
+
+.team .fade-gradient {
+    background: linear-gradient(90deg, var(--easy-black) 0%, rgb(0, 0, 0, 0) 30%);
+}
+
+.team .gradient-reversed {
+    left: 0;
+    background: linear-gradient(270deg, var(--easy-black) 0%, rgb(0, 0, 0, 0) 30%);
+}
+
 /* Text content */
 #front-about-content-wrapper {
     display: block;
@@ -511,7 +580,6 @@ h1 > .gradient {
     font-size: var(--font-size-largetext);
     width: 84%;
     margin-top: 12rem;
-    margin-bottom: 4rem;
     border-bottom: 2px solid var(--white);
     padding-bottom: 1vh;
 }
@@ -566,6 +634,65 @@ h1 > .gradient {
     border-radius: 8px;
     right: 0;
     z-index: 2;
+}
+
+/* Awards */
+
+.award-container {
+    position: relative;
+
+    color: white;
+    padding: 2rem;
+    margin: 4rem;
+    border-radius: 6px;
+
+    height: 20rem;
+}
+
+
+.deans-list {
+    background-image: url(Graphics/Competition/canpac\ team\ photo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.imagery-award {
+    background-image: url(Graphics/Competition/outtake.jpeg);
+    background-position: 52%;
+    background-size: cover;
+}
+
+/* TODO: replace this with an actual image */
+.sustainability-award {
+    background-image: url(Graphics/Competition/Library-Conference-3.jpg);
+}
+
+.rookie-all-star {
+    background-image: url(Graphics/10384\ team\ image.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.award {
+    backdrop-filter: blur(25px);
+    padding: 3rem;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 6rem);
+    transform: translateX(-50%);
+    left: 50%;
+    text-shadow: 0 0 3px black;
+}
+
+.award-recipient {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    width: fit-content;
+    padding: 0.5rem;
 }
 
 /* Sponsor button/promo */
@@ -1294,7 +1421,10 @@ h1 > .gradient {
     #sponsor-info p {font-size: 1.5rem}
     #sponsor-display {width: 90%; margin-left: 5%}
     #sponsor-display > div > h1 {font-size: 2.5rem}
-    #sponsor-buttons a {font-size: 1.5rem}
+    #sponsor-buttons a {
+        font-size: 1.5rem;
+        max-width: fit-content;
+    }
 
     .tiers > article {width: 300px; font-size: 1rem}
     .tiers ul {width: 280px; margin-left: 10px}
